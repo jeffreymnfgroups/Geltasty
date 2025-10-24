@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useRef, useState } from "react"
 import Link from "next/link"
+import { TextGenerateEffect } from "../../ui/text-generate-effect"
 
 const HowItWorks = () => {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -133,23 +134,24 @@ const HowItWorks = () => {
                   }}
                 ></div>
 
-                <div className="absolute top-4 right-4 z-20">
+                <div className="absolute top-4 right-4 z-30">
                   <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
                     <span className="text-sm font-medium">Step 1: The Seed</span>
                   </div>
                 </div>
 
                 {/* Video on Right */}
-                <div className="absolute right-8 top-1/2 transform -translate-y-1/2 z-20 w-40 h-48 md:w-52 md:h-60">
+                <div className="absolute right-0 top-0 bottom-0 z-20 w-3/10 overflow-hidden rounded-l-3xl">
+                  <div className="absolute inset-0" style={{
+                    backgroundImage: "linear-gradient(to right, rgba(27,29,30,0.95) 0%, rgba(27,29,30,0.6) 30%, rgba(27,29,30,0.2) 70%, transparent 100%)",
+                    pointerEvents: 'none'
+                  }}></div>
                   <video
                     autoPlay
                     loop
                     muted
                     playsInline
-                    className="w-full h-full object-cover rounded-lg animate-border-fade border-2"
-                    style={{
-                      borderColor: 'rgba(255, 255, 255, 0.3)'
-                    }}
+                    className="w-full h-full object-cover"
                   >
                     <source src="/images/home/stage.mp4" type="video/mp4" />
                   </video>
@@ -157,16 +159,14 @@ const HowItWorks = () => {
 
                 <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-center pr-64 md:pr-72">
                   <div className="max-w-lg">
-                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-white font-bold leading-tight mb-4">
-                      Create Your Profile
-                    </h3>
-                    <p className="text-white/80 text-lg mb-4">
-                      Set up your personalized learning profile and take our assessment.
-                      Your baseline learning style is identified, and your potential is unlocked.
+                    <TextGenerateEffect words="Create Your Profile" duration={0.8} visible={isFirstCardVisible} />
+                    <p className="text-white/90 text-base sm:text-sm md:text-base leading-relaxed mb-6 font-medium">
+                      Set up your personalized learning profile and take our assessment. Your baseline learning style is identified, and your potential is unlocked.
                     </p>
-                    <p className="text-white/60 text-sm">
-                      ✓ Assessment Completed! Your baseline learning style profile is ready.
-                    </p>
+                    <div className="inline-flex items-center gap-2 px-4 py-3 rounded-lg bg-green-500/20 border border-green-500/40">
+                      <span className="text-green-300">✓</span>
+                      <span className="text-green-100 text-sm font-medium">Assessment Completed! Your baseline learning style profile is ready.</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -199,23 +199,24 @@ const HowItWorks = () => {
                   }}
                 ></div>
 
-                <div className="absolute top-4 right-4 z-20">
+                <div className="absolute top-4 right-4 z-30">
                   <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
                     <span className="text-sm font-medium">Step 2: The Growth</span>
                   </div>
                 </div>
 
                 {/* Video on Right */}
-                <div className="absolute right-8 top-1/2 transform -translate-y-1/2 z-20 w-40 h-48 md:w-52 md:h-60">
+                <div className="absolute right-0 top-0 bottom-0 z-20 w-3/10 overflow-hidden rounded-l-3xl">
+                  <div className="absolute inset-0" style={{
+                    backgroundImage: "linear-gradient(to right, rgba(27,29,30,0.95) 0%, rgba(27,29,30,0.6) 30%, rgba(27,29,30,0.2) 70%, transparent 100%)",
+                    pointerEvents: 'none'
+                  }}></div>
                   <video
                     autoPlay
                     loop
                     muted
                     playsInline
-                    className="w-full h-full object-cover rounded-lg animate-border-fade border-2"
-                    style={{
-                      borderColor: 'rgba(255, 255, 255, 0.3)'
-                    }}
+                    className="w-full h-full object-cover"
                   >
                     <source src="/images/home/stage2.mp4" type="video/mp4" />
                   </video>
@@ -223,14 +224,14 @@ const HowItWorks = () => {
 
                 <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-center pr-64 md:pr-72">
                   <div className="max-w-lg">
-                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-white font-bold leading-tight mb-4">
-                      Match with Expert Mentor
-                    </h3>
-                    <p className="text-white/80 text-lg mb-4">
-                      Get connected with a NEET/UPSC expert mentor. Together, you&apos;ll set SMART goals
-                      and create a personalized study roadmap tailored to your needs.
+                    <TextGenerateEffect words="Match with Expert Mentor" duration={0.8} visible={isSecondCardVisible} />
+                    <p className="text-white/90 text-base sm:text-sm md:text-base leading-relaxed mb-6 font-medium">
+                      Get connected with a NEET/UPSC expert mentor. Together, you&apos;ll set SMART goals and create a personalized study roadmap tailored to your needs.
                     </p>
-                    <p className="text-white/60 text-sm">✓ Goals Set ✓ Study Roadmap Ready</p>
+                    <div className="inline-flex items-center gap-2 px-4 py-3 rounded-lg bg-green-500/20 border border-green-500/40">
+                      <span className="text-green-300">✓</span>
+                      <span className="text-green-100 text-sm font-medium">Goals Set • Study Roadmap Ready</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -249,7 +250,7 @@ const HowItWorks = () => {
                 <div
                   className="absolute inset-0 z-0 bg-gradient-to-b from-purple_blue/40 to-dark_black/80"
                   style={{
-                    backgroundImage: "url('/images/home/background-section3.png')",
+                    backgroundImage: "url('/images/home/background-section2.png')",
                     backgroundSize: "cover",
                     backgroundPosition: "bottom center",
                     backgroundBlendMode: "overlay"
@@ -263,23 +264,24 @@ const HowItWorks = () => {
                   }}
                 ></div>
 
-                <div className="absolute top-4 right-4 z-20">
+                <div className="absolute top-4 right-4 z-30">
                   <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
                     <span className="text-sm font-medium">Step 3: The Mastery</span>
                   </div>
                 </div>
 
                 {/* Video on Right */}
-                <div className="absolute right-8 top-1/2 transform -translate-y-1/2 z-20 w-40 h-48 md:w-52 md:h-60">
+                <div className="absolute right-0 top-0 bottom-0 z-20 w-3/10 overflow-hidden rounded-l-3xl">
+                  <div className="absolute inset-0" style={{
+                    backgroundImage: "linear-gradient(to right, rgba(27,29,30,0.95) 0%, rgba(27,29,30,0.6) 30%, rgba(27,29,30,0.2) 70%, transparent 100%)",
+                    pointerEvents: 'none'
+                  }}></div>
                   <video
                     autoPlay
                     loop
                     muted
                     playsInline
-                    className="w-full h-full object-cover rounded-lg animate-border-fade border-2"
-                    style={{
-                      borderColor: 'rgba(255, 255, 255, 0.3)'
-                    }}
+                    className="w-full h-full object-cover"
                   >
                     <source src="/images/home/stage3.mp4" type="video/mp4" />
                   </video>
@@ -287,17 +289,23 @@ const HowItWorks = () => {
 
                 <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-center pr-64 md:pr-72">
                   <div className="max-w-lg">
-                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-white font-bold leading-tight mb-4">
-                      Learn with Real-Time Insights
-                    </h3>
-                    <p className="text-white/80 text-lg mb-4">
-                      Experience dynamic learning powered by AI analytics. Track your progress, identify weak areas,
-                      maintain streaks, and master each stage from Reading to Practice.
+                    <TextGenerateEffect words="Learn with Real-Time Insights" duration={0.8} visible={isThirdCardVisible} />
+                    <p className="text-white/90 text-base sm:text-sm md:text-base leading-relaxed mb-6 font-medium">
+                      Experience dynamic learning powered by AI analytics. Track your progress, identify weak areas, maintain streaks, and master each stage from Reading to Practice.
                     </p>
-                    <div className="space-y-2 text-white/60 text-sm">
-                      <p>✓ Weak Area Improved: +20%</p>
-                      <p>✓ Streak: 14 Days</p>
-                      <p>✓ Mastered 4 Stages: Reading, Learning, Revision, Practice</p>
+                    <div className="space-y-3">
+                      <div className="inline-flex items-center gap-2 px-4 py-3 rounded-lg bg-green-500/20 border border-green-500/40">
+                        <span className="text-green-300">✓</span>
+                        <span className="text-green-100 text-sm font-medium">Weak Area Improved: +20%</span>
+                      </div>
+                      <div className="inline-flex items-center gap-2 px-4 py-3 rounded-lg bg-green-500/20 border border-green-500/40 ml-2">
+                        <span className="text-green-300">✓</span>
+                        <span className="text-green-100 text-sm font-medium">Streak: 14 Days</span>
+                      </div>
+                      <div className="inline-flex items-center gap-2 px-4 py-3 rounded-lg bg-green-500/20 border border-green-500/40">
+                        <span className="text-green-300">✓</span>
+                        <span className="text-green-100 text-sm font-medium">Mastered All Stages</span>
+                      </div>
                     </div>
                   </div>
                 </div>
