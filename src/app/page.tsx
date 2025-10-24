@@ -4,7 +4,7 @@ import Brand from "./components/home/brand";
 // import CreativeMind from "./components/home/creative-mind";
 import CustomerStories from "./components/home/customer-stories";
 import HowItWorks from "./components/home/how-it-works";
-import KeyBenefits from "./components/home/key-benefits/page";
+import KeyBenefits from "./components/home/key-benefits";
 // import Faq from "./components/home/faq";
 import HeroSection from "./components/home/hero";
 // import Innovation from "./components/home/innovation";
