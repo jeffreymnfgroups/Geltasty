@@ -1,11 +1,5 @@
-import { Metadata } from "next";
 import { CardStack } from "../../ui/card-stack";
 import { cn } from "@/lib/utils";
-
-export const metadata: Metadata = {
-  title: "Key Benefits | Geltasty",
-  description: "Discover the key benefits of Geltasty - Track progress, get expert guidance, and gain data-driven insights for your learning journey.",
-};
 
 // Small utility to highlight the content of specific section of a testimonial content
 export const Highlight = ({
@@ -138,4 +132,3 @@ export default function KeyBenefits() {
     </section>
   );
 }
-
