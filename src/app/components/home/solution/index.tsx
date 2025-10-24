@@ -2,11 +2,10 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 function Solutions() {
   const ref = useRef(null)
-  const inView = useInView(ref)
 
   const bottomAnimation = {
     initial: { y: '5%', opacity: 0 },
@@ -32,7 +31,7 @@ function Solutions() {
                   </span>
                 </h2>
                 <p className='text-base md:text-lg dark:text-dark_black max-w-2xl'>
-                  Join thousands of aspirants who've replaced guesswork with measurable growth
+                  Join thousands of aspirants who&apos;ve replaced guesswork with measurable growth
                 </p>
               </div>
 

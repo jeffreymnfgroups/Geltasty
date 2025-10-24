@@ -21,7 +21,8 @@ function GestaltyDifference() {
       after: "Data-driven stages",
       beforeDetail: "I feel lost...",
       afterDetail: "I know exactly where I am",
-      borderColor: "border-l-red-500"
+      borderColor: "border-l-red-500",
+      gradient: "from-red-50 to-red-100 dark:from-red-900/20 dark:to-red-800/20"
     },
     {
       label: "PROGRESS",
@@ -34,8 +35,9 @@ function GestaltyDifference() {
       before: "Subjective progress",
       after: "Real-time metrics",
       beforeDetail: "Am I doing enough?",
-      afterDetail: "I've completed Stage 3!",
-      borderColor: "border-l-orange-500"
+      afterDetail: "I&apos;ve completed Stage 3!",
+      borderColor: "border-l-orange-500",
+      gradient: "from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20"
     },
     {
       label: "SUPPORT",
@@ -49,9 +51,10 @@ function GestaltyDifference() {
       ),
       before: "Limited help",
       after: "24/7 support",
-      beforeDetail: "I'm stuck...",
+      beforeDetail: "I&apos;m stuck...",
       afterDetail: "Mentor feedback received",
-      borderColor: "border-l-pink-500"
+      borderColor: "border-l-pink-500",
+      gradient: "from-pink-50 to-pink-100 dark:from-pink-900/20 dark:to-pink-800/20"
     },
     {
       label: "PERSONALIZATION",
@@ -63,9 +66,10 @@ function GestaltyDifference() {
       ),
       before: "One-size-fits-all",
       after: "Personalized profile",
-      beforeDetail: "This doesn't work for me",
+      beforeDetail: "This doesn&apos;t work for me",
       afterDetail: "Perfect for my learning style",
-      borderColor: "border-l-yellow-500"
+      borderColor: "border-l-yellow-500",
+      gradient: "from-yellow-50 to-yellow-100 dark:from-yellow-900/20 dark:to-yellow-800/20"
     },
     {
       label: "STRATEGY",
@@ -79,7 +83,8 @@ function GestaltyDifference() {
       after: "Evidence-based",
       beforeDetail: "Wasting time guessing",
       afterDetail: "Science-backed strategies",
-      borderColor: "border-l-indigo-500"
+      borderColor: "border-l-indigo-500",
+      gradient: "from-indigo-50 to-indigo-100 dark:from-indigo-900/20 dark:to-indigo-800/20"
     }
   ]
 
@@ -147,7 +152,7 @@ function GestaltyDifference() {
                     </h3>
                   </div>
                   <p className='text-sm text-gray-600 dark:text-gray-400 italic'>
-                    "{item.beforeDetail}"
+                    &quot;{item.beforeDetail}&quot;
                   </p>
                 </div>
 
@@ -175,7 +180,7 @@ function GestaltyDifference() {
                     </h3>
                   </div>
                   <p className='text-sm text-gray-600 dark:text-gray-400 italic'>
-                    "{item.afterDetail}"
+                    &quot;{item.afterDetail}&quot;
                   </p>
                 </div>
               </div>
