@@ -1,16 +1,17 @@
 'use client'
 import { useEffect, useState } from 'react'
+import type { avatar, brand, innovation, onlinePresence, creativeMind, WebResultTag, startupPlan, faq, achievements } from '@/app/types/menu'
 
 interface PageData {
-  avatarList?: Array<Record<string, unknown>>
-  brandList?: Array<Record<string, unknown>>
-  innovationList?: Array<Record<string, unknown>>
-  onlinePresenceList?: Array<Record<string, unknown>>
-  creativeMindList?: Array<Record<string, unknown>>
-  WebResultTagList?: Array<Record<string, unknown>>
-  startupPlanList?: Array<Record<string, unknown>>
-  faqList?: Array<Record<string, unknown>>
-  achievementsList?: Array<Record<string, unknown>>
+  avatarList?: avatar[]
+  brandList?: brand[]
+  innovationList?: innovation[]
+  onlinePresenceList?: onlinePresence[]
+  creativeMindList?: creativeMind[]
+  WebResultTagList?: WebResultTag[]
+  startupPlanList?: startupPlan[]
+  faqList?: faq[]
+  achievementsList?: achievements[]
 }
 
 // Static data - no API call needed

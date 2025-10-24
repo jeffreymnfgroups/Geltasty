@@ -5,6 +5,7 @@ import React, { useRef } from 'react'
 import { motion } from 'framer-motion'
 import StarRating from '../../shared/star-rating'
 import { usePageData } from '@/hooks/use-page-data'
+import type { avatar } from '@/app/types/menu'
 
 function HeroSection() {
   const ref = useRef(null)
@@ -120,7 +121,7 @@ function HeroSection() {
                 {/* --------------- avatar division -------------- */}
                 <div className='flex items-center gap-7'>
                   <ul className='avatar flex flex-row items-center'>
-                    {avatarList?.map((items: {image: string}, index: number) => (
+                    {avatarList?.map((items: avatar, index: number) => (
                       <li key={index} className='-mr-2 z-1 avatar-hover:ml-2'>
                         <Image
                           src={items.image}
