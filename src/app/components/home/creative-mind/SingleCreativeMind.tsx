@@ -1,10 +1,18 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+interface CreativeMind {
+  image: string
+  name: string
+  position: string
+  twitterLink: string
+  linkedinLink: string
+}
+
 const SingleCreativeMind = ({
     creativemind,
 }: {
-    creativemind: any
+    creativemind: CreativeMind
 }) => {
     const { image, name, position, twitterLink, linkedinLink } = creativemind
 

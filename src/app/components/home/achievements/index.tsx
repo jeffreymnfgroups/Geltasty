@@ -10,7 +10,7 @@ function Achievements() {
   const { data } = usePageData()
   const achievementsList = data?.achievementsList
 
-  const bottomAnimation = (index: any) => ({
+  const bottomAnimation = (index: number) => ({
     initial: { y: '5%', opacity: 0 },
     animate: inView ? { y: 0, opacity: 1 } : { y: '10%', opacity: 0 },
     transition: { duration: 0.4, delay: 0.4 + index * 0.3 },
@@ -30,10 +30,11 @@ function Achievements() {
               </h2>
             </div>
             <div className='grid md:grid-cols-2 xl:grid-cols-3 gap-6'>
-              {achievementsList?.map((item:any, index:any) => {
+              {achievementsList?.map((item: unknown, index: number) => {
+                const achievement = item as { url: string; icon: string; dark_icon: string; sub_title: string; title: string; year: string }
                 return (
                   <motion.div {...bottomAnimation(index)} key={index}>
-                    <SingleAchievement key={index} achievements={item} />
+                    <SingleAchievement key={index} achievements={achievement} />
                   </motion.div>
                 )
               })}

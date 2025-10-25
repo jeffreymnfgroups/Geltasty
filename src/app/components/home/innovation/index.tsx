@@ -11,7 +11,7 @@ function Innovation() {
   const { data } = usePageData()
   const innovationList = data?.innovationList
 
-  const bottomAnimation = (index: any) => ({
+  const bottomAnimation = (index: number) => ({
     initial: { y: '25%', opacity: 0 },
     animate: inView ? { y: 0, opacity: 1 } : { y: '25%', opacity: 0 },
     transition: { duration: 0.3, delay: 0.3 + index * 0.3 },
@@ -35,22 +35,23 @@ function Innovation() {
               <motion.div
                 {...bottomAnimation(2)}
                 className='grid auto-rows-max grid-cols-1 md:grid-cols-2 2xl:grid-cols-5 gap-6 w-full'>
-                {innovationList?.map((items:any, index:any) => {
+                {innovationList?.map((items: unknown, index: number) => {
+                  const item = items as { bg_color: string; image: string; txt_color: string; title: string }
                   return (
                     <div
                       key={index}
-                      className={`${items.bg_color} flex flex-col p-8 rounded-2xl gap-6 lg:gap-9 `}>
+                      className={`${item.bg_color} flex flex-col p-8 rounded-2xl gap-6 lg:gap-9 `}>
                       <div>
                         <Image
-                          src={items.image}
+                          src={item.image}
                           alt='image'
                           height={40}
                           width={40}
                         />
                       </div>
                       <div>
-                        <h5 className={`${items.txt_color}`}>
-                          {items.title.split('\n')?.map((line:any, i:number) => (
+                        <h5 className={`${item.txt_color}`}>
+                          {item.title.split('\n')?.map((line: string, i:number) => (
                             <React.Fragment key={i}>
                               {line}
                               <br />

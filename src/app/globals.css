@@ -20,6 +20,7 @@ layer(base);
   --shadow-header_shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
 
   --color-dark_black: #1b1d1e;
+  --color-dark-navy: #0D1B4C;
   --color-purple_blue: #4928fd;
   --color-purple: #ba81ee;
   --color-blue: #70b5ff;
@@ -31,6 +32,9 @@ layer(base);
   --color-pale-yellow: #f6e683;
   --color-dark_yellow_gradient: #443f32;
   --color-dark_blue_gradient: #303d42;
+  --color-gold: #F7B500;
+  --color-gold-light: #FFCC33;
+  --color-primary: #F7B500;
 
   --breakpoint-Xsm: 425px;
   --breakpoint-sm: 576px;
@@ -129,6 +133,7 @@ layer(base);
 @layer utilities {
   .instrument-font {
     font-family: 'Instrument Serif', serif;
+    color: #F7B500;
   }
 
   .brockmann-font {

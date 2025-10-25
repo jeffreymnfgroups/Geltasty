@@ -21,26 +21,27 @@ function Subscription() {
               </h2>
             </div>
             <div className='grid grid-cols-1 xxl:grid-cols-2 gap-6'>
-              {startupPlanList?.map((items: any, index: number) => (
-                <div
-                  className={`${items.plan_bg_color} p-6 md:p-10 rounded-2xl`}
+              {startupPlanList?.map((items: unknown, index: number) => {
+                const item = items as { plan_bg_color: string; plan_name: string; descp_color: string; plan_descp: string; text_color: string; plan_price: string; border_color: string; icon_img: string; plan_feature: string[] }
+                return <div
+                  className={`${item.plan_bg_color} p-6 md:p-10 rounded-2xl`}
                   key={index}>
                   <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                     <div className='flex flex-col gap-12 md:pr-6'>
                       <div className='flex flex-col gap-3'>
                         <p className='py-2 px-4 bg-dark_black w-fit text-white rounded-full'>
-                          {items.plan_name}
+                          {item.plan_name}
                         </p>
-                        <p className={`text-${items.descp_color}`}>
-                          {items.plan_descp}
+                        <p className={`text-${item.descp_color}`}>
+                          {item.plan_descp}
                         </p>
                       </div>
                       <div className='flex flex-col gap-3 md:gap-5'>
                         <h2
-                          className={`${items.text_color} dark:${items.text_color}`}>
-                          {items.plan_price}
+                          className={`${item.text_color} dark:${item.text_color}`}>
+                          {item.plan_price}
                           <span
-                            className={`text-base text-${items.descp_color} ml-1`}>
+                            className={`text-base text-${item.descp_color} ml-1`}>
                             /month
                           </span>
                         </h2>
@@ -75,19 +76,19 @@ function Subscription() {
                       </div>
                     </div>
                     <div
-                      className={`flex flex-col gap-4 md:pl-6 md:border-l ${items.border_color}`}>
-                      <p className={`${items.text_color}`}>Features</p>
+                      className={`flex flex-col gap-4 md:pl-6 md:border-l ${item.border_color}`}>
+                      <p className={`${item.text_color}`}>Features</p>
                       <ul className='flex flex-col gap-4'>
-                        {items.plan_feature?.map((feature: any, index: number) => {
+                        {item.plan_feature?.map((feature: string, idx: number) => {
                           return (
-                            <li key={index} className='flex items-center gap-3'>
+                            <li key={idx} className='flex items-center gap-3'>
                               <Image
-                                src={items.icon_img}
+                                src={item.icon_img}
                                 alt='icon'
                                 width={20}
                                 height={20}
                               />
-                              <p className={`${items.text_color}`}>{feature}</p>
+                              <p className={`${item.text_color}`}>{feature}</p>
                             </li>
                           )
                         })}
@@ -95,7 +96,7 @@ function Subscription() {
                     </div>
                   </div>
                 </div>
-              ))}
+              })}
             </div>
           </div>
         </div>

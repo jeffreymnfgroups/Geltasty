@@ -90,7 +90,7 @@ const HowItWorks = () => {
                   className="pulse-chip opacity-0 animate-fade-in"
                   style={{ animationDelay: "0.1s" }}
                 >
-                  <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-purple_blue text-white mr-2">
+                  <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-primary text-white mr-2">
                     03
                   </span>
                   <span className="dark:text-white">Process</span>
@@ -118,7 +118,7 @@ const HowItWorks = () => {
                 }}
               >
                 <div
-                  className="absolute inset-0 z-0 bg-gradient-to-b from-purple_blue/40 to-dark_black/80"
+                  className="absolute inset-0 z-0 bg-gradient-to-b from-primary/40 to-dark_black/80"
                   style={{
                     backgroundImage: "url('/images/home/background-section1.png')",
                     backgroundSize: "cover",
@@ -183,7 +183,7 @@ const HowItWorks = () => {
                 }}
               >
                 <div
-                  className="absolute inset-0 z-0 bg-gradient-to-b from-purple_blue/40 to-dark_black/80"
+                  className="absolute inset-0 z-0 bg-gradient-to-b from-primary/40 to-dark_black/80"
                   style={{
                     backgroundImage: "url('/images/home/background-section2.png')",
                     backgroundSize: "cover",
@@ -248,7 +248,7 @@ const HowItWorks = () => {
                 }}
               >
                 <div
-                  className="absolute inset-0 z-0 bg-gradient-to-b from-purple_blue/40 to-dark_black/80"
+                  className="absolute inset-0 z-0 bg-gradient-to-b from-primary/40 to-dark_black/80"
                   style={{
                     backgroundImage: "url('/images/home/background-section2.png')",
                     backgroundSize: "cover",
@@ -321,7 +321,7 @@ const HowItWorks = () => {
         <div className="container px-6 lg:px-8 flex justify-center">
           <Link
             href='/contact'
-            className='group bg-purple_blue text-white font-medium flex flex-row justify-between items-center py-2 px-4 rounded-full md:max-w-64 w-full sm:w-auto border border-purple_blue transition-all duration-200 ease-in-out hover:bg-transparent hover:text-purple_blue dark:hover:text-purple_blue'
+            className='group bg-primary text-white font-medium flex flex-row justify-between items-center py-2 px-4 rounded-full md:max-w-64 w-full sm:w-auto border border-primary transition-all duration-200 ease-in-out hover:bg-transparent hover:text-primary dark:hover:text-primary'
           >
             <span className='flex-1 text-center transform transition-transform duration-200 ease-in-out group-hover:scale-95'>
               Start Your Journey Today
@@ -338,7 +338,7 @@ const HowItWorks = () => {
                 width='40'
                 height='40'
                 rx='20'
-                className='fill-white transition-colors duration-200 ease-in-out group-hover:fill-purple_blue'
+                className='fill-white transition-colors duration-200 ease-in-out group-hover:fill-primary'
               />
               <path
                 d='M15.832 15.3334H24.1654V23.6667'

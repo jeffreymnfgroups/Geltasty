@@ -1,5 +1,4 @@
 'use client'
-import { signIn } from 'next-auth/react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
@@ -23,7 +22,7 @@ const Signin = () => {
 
   // Input validation function
   const validateForm = () => {
-    let errors = { email: '', password: '' }
+    const errors = { email: '', password: '' }
     let isValid = true
 
     if (!loginData.email) {
@@ -56,7 +55,7 @@ const Signin = () => {
       await new Promise((resolve) => setTimeout(resolve, 2000))
       localStorage.setItem('user', JSON.stringify({ user: loginData.email }))
       router.push('/')
-    } catch (error) {
+    } catch {
       toast.error('Something went wrong. Please try again.')
     } finally {
       setLoading(false)

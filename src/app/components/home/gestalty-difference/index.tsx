@@ -197,7 +197,7 @@ function GestaltyDifference() {
         >
           <Link 
             href="/how-it-works"
-            className='group bg-purple_blue text-white font-medium flex flex-row justify-between items-center py-2 px-5 rounded-full max-w-64 w-full md:py-3 border border-purple_blue transition-all duration-200 ease-in-out hover:bg-transparent hover:text-purple_blue'
+            className='group bg-primary text-white font-medium flex flex-row justify-between items-center py-2 px-5 rounded-full max-w-64 w-full md:py-3 border border-primary transition-all duration-200 ease-in-out hover:bg-transparent hover:text-primary'
           >
             <span className='flex text-start transform transition-transform duration-200 ease-in-out group-hover:translate-x-4'>
               See How It Works
@@ -213,7 +213,7 @@ function GestaltyDifference() {
                 width='40'
                 height='40'
                 rx='20'
-                className='fill-white transition-colors duration-200 ease-in-out group-hover:fill-purple_blue'
+                className='fill-white transition-colors duration-200 ease-in-out group-hover:fill-primary'
               />
               <path
                 d='M15.832 15.3334H24.1654V23.6667'

@@ -1,6 +1,5 @@
 'use client'
 import { Carousel, Card } from '../../ui/apple-cards-carousel'
-import { usePageData } from '@/hooks/use-page-data'
 
 const problemCards = [
   {
@@ -126,7 +125,6 @@ const problemCards = [
 ]
 
 function WebResult() {
-  const { data } = usePageData()
   const carouselItems = problemCards.map((card, index) => (
     <Card key={index} card={card} index={index} layout={true} />
   ))

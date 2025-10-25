@@ -21,7 +21,6 @@ const ForgotPassword = () => {
       setEmailError('Invalid email format.')
       return false
     }
-    const domain = value.split('@')[1]
     setEmailError('') // Clear error if valid
     return true
   }

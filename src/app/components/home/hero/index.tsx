@@ -47,7 +47,7 @@ function HeroSection() {
                 {/* ----------- Get started Link -------------- */}
                 <Link
                   href='/contact'
-                  className='group bg-purple_blue text-white font-medium flex flex-row justify-between items-center py-2 px-5 rounded-full max-w-64 w-full md:py-3 border border-purple_blue transition-all duration-200 ease-in-out hover:bg-transparent hover:text-purple_blue'>
+                  className='group bg-primary text-white font-medium flex flex-row justify-between items-center py-2 px-5 rounded-full max-w-64 w-full md:py-3 border border-primary transition-all duration-200 ease-in-out hover:bg-transparent hover:text-primary'>
                   <span className='flex text-start transform transition-transform duration-200 ease-in-out group-hover:translate-x-28'>
                     Get Started Free
                   </span>
@@ -62,7 +62,7 @@ function HeroSection() {
                       width='40'
                       height='40'
                       rx='20'
-                      className='fill-white transition-colors duration-200 ease-in-out group-hover:fill-purple_blue'
+                      className='fill-white transition-colors duration-200 ease-in-out group-hover:fill-primary'
                     />
                     <path
                       d='M15.832 15.3334H24.1654V23.6667'
@@ -84,7 +84,7 @@ function HeroSection() {
                 {/* ----------- Schedule Demo Link -------------- */}
                 <Link
                   href='/contact'
-                  className='group bg-transparent text-purple_blue font-medium flex flex-row justify-between items-center py-2 px-5 rounded-full max-w-64 w-full md:py-3 border border-purple_blue transition-all duration-200 ease-in-out hover:bg-purple_blue hover:text-white'>
+                  className='group bg-transparent text-primary font-medium flex flex-row justify-between items-center py-2 px-5 rounded-full max-w-64 w-full md:py-3 border border-primary transition-all duration-200 ease-in-out hover:bg-primary hover:text-white'>
                   <span className='flex text-start transform transition-transform duration-200 ease-in-out group-hover:translate-x-28'>
                     Schedule Demo
                   </span>
@@ -99,18 +99,18 @@ function HeroSection() {
                       width='40'
                       height='40'
                       rx='20'
-                      className='fill-purple_blue transition-colors duration-200 ease-in-out group-hover:fill-white'
+                      className='fill-primary transition-colors duration-200 ease-in-out group-hover:fill-white'
                     />
                     <path
                       d='M15.832 15.3334H24.1654V23.6667'
-                      className='stroke-white transition-colors duration-200 ease-in-out group-hover:stroke-purple_blue'
+                      className='stroke-white transition-colors duration-200 ease-in-out group-hover:stroke-primary'
                       strokeWidth='1.66667'
                       strokeLinecap='round'
                       strokeLinejoin='round'
                     />
                     <path
                       d='M15.832 23.6667L24.1654 15.3334'
-                      className='stroke-white transition-colors duration-500 ease-in-out group-hover:stroke-purple_blue'
+                      className='stroke-white transition-colors duration-500 ease-in-out group-hover:stroke-primary'
                       strokeWidth='1.66667'
                       strokeLinecap='round'
                       strokeLinejoin='round'

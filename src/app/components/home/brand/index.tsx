@@ -27,9 +27,10 @@ function Brand() {
                   duration={20}
                   pauseOnHover={true}
                   blurBorders={false}>
-                  {brandList?.map((items: any, index: any) => (
-                    <SingleBrand key={index} brand={items} />
-                  ))}
+                  {brandList?.map((items: unknown, index: number) => {
+                    const brand = items as { image: string; title: string; darkImg: string }
+                    return <SingleBrand key={index} brand={brand} />
+                  })}
                 </Slider>
               </div>
             )}

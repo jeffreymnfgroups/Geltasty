@@ -1,7 +1,6 @@
 import { NextAuthOptions } from "next-auth";
 import GitHubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
-import nodemailer from "nodemailer";
 
 export const authOptions: NextAuthOptions = {
   pages: {
@@ -25,9 +24,8 @@ export const authOptions: NextAuthOptions = {
   ],
 
   callbacks: {
-    jwt: async (payload: any) => {
-      const { token } = payload;
-      const user = payload.user;
+    jwt: async (payload: unknown) => {
+      const { token, user } = payload as { token: Record<string, unknown>; user: { id: string } | undefined };
 
       if (user) {
         return {

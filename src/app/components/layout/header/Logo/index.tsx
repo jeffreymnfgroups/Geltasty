@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-interface HeaderProps { }
-const Logo: React.FC<HeaderProps> = () => {
+const Logo = () => {
     return (
         <Link href="/">
             <Image

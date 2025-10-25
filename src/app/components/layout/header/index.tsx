@@ -70,7 +70,7 @@ const Header = () => {
                 <div className='hidden lg:flex gap-4'>
                   <button
                     onClick={() => handleSignOut()}
-                    className='flex group font-normal items-center gap-1 transition-all duration-200 ease-in-out text-white px-4 py-2 bg-dark_black dark:bg-white/15 rounded-full hover:text-dark_black hover:bg-white dark:hover:bg-white/5 dark:hover:text-white border border-dark_black'>
+                    className='flex group font-normal items-center gap-1 transition-all duration-200 ease-in-out text-white px-4 py-2 bg-dark_black dark:bg-white/15 rounded-full hover:bg-[#0D1B4C] dark:hover:bg-white/5 dark:hover:text-white border border-dark_black'>
                     Sign Out
                     <Icon icon='solar:logout-outline' width='25' height='25' />
                   </button>
@@ -170,7 +170,7 @@ const Header = () => {
                   <>
                     <button
                       onClick={() => signOut()}
-                      className='flex w-full group font-normal items-center gap-2 transition-all duration-200 ease-in-out text-white dark:text-dark_black px-4 py-2 bg-dark_black rounded-md hover:text-dark_black hover:bg-white border border-dark_black'>
+                      className='flex w-full group font-normal items-center gap-2 transition-all duration-200 ease-in-out text-white dark:text-dark_black px-4 py-2 bg-dark_black dark:bg-white rounded-md hover:bg-[#0D1B4C] dark:hover:text-dark_black dark:hover:bg-white border border-dark_black'>
                       Sign Out
                       <Icon
                         icon='solar:logout-outline'

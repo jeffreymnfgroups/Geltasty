@@ -13,7 +13,7 @@ function ContactForm() {
   })
   const [submitted, setSubmitted] = useState(false)
   const [loader, setLoader] = useState(false)
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData((prevData) => ({
       ...prevData,
@@ -29,7 +29,7 @@ function ContactForm() {
     formData.message = ''
   }
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoader(true)
 
@@ -197,7 +197,7 @@ function ContactForm() {
                   {!loader ? (
                     <button
                       type='submit'
-                      className='group w-fit text-white dark:text-dark_black font-medium bg-dark_black dark:bg-white rounded-full flex items-center gap-4 py-2 pl-5 pr-2 transition-all duration-200 ease-in-out  hover:bg-transparent border hover:text-dark_black border-dark_black'>
+                      className='group w-fit text-white dark:text-dark_black font-medium bg-dark_black dark:bg-white rounded-full flex items-center gap-4 py-2 pl-5 pr-2 transition-all duration-200 ease-in-out hover:bg-[#0D1B4C] dark:hover:bg-transparent border dark:hover:text-dark_black border-dark_black'>
                       <span className='transform transition-transform duration-200 ease-in-out group-hover:translate-x-10'>
                         Let’s Collaborate
                       </span>

@@ -1,7 +1,13 @@
 import Image from 'next/image'
 import Slider from 'react-infinite-logo-slider'
 
-const SingleBrand = ({ brand }: { brand: any }) => {
+interface Brand {
+  image: string
+  title: string
+  darkImg: string
+}
+
+const SingleBrand = ({ brand }: { brand: Brand }) => {
   const { image, title, darkImg } = brand
 
   return (

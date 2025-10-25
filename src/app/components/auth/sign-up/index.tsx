@@ -77,7 +77,7 @@ const SignUp = () => {
       await new Promise((resolve) => setTimeout(resolve, 2000))
       localStorage.setItem('user', JSON.stringify({ user: formData.name }))
       router.push('/')
-    } catch (error) {
+    } catch {
       toast.error('Something went wrong. Please try again.')
     } finally {
       setLoading(false)

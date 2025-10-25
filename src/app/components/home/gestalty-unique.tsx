@@ -100,7 +100,7 @@ export function GestaltyUnique() {
         <div className="w-full py-8 flex justify-center">
           <Link
             href="/contact"
-            className="group bg-purple_blue text-white font-medium flex flex-row justify-between items-center py-2 px-4 rounded-full md:max-w-64 w-full sm:w-auto border border-purple_blue transition-all duration-200 ease-in-out hover:bg-transparent hover:text-purple_blue dark:hover:text-purple_blue"
+            className="group bg-primary text-white font-medium flex flex-row justify-between items-center py-2 px-4 rounded-full md:max-w-64 w-full sm:w-auto border border-primary transition-all duration-200 ease-in-out hover:bg-transparent hover:text-primary dark:hover:text-primary"
           >
             <span className="flex-1 text-center transform transition-transform duration-200 ease-in-out group-hover:scale-95">
               Learn More
@@ -117,7 +117,7 @@ export function GestaltyUnique() {
                 width="40"
                 height="40"
                 rx="20"
-                className="fill-white transition-colors duration-200 ease-in-out group-hover:fill-purple_blue"
+                className="fill-white transition-colors duration-200 ease-in-out group-hover:fill-primary"
               />
               <path
                 d="M15.832 15.3334H24.1654V23.6667"
@@ -151,8 +151,8 @@ const DifferentiatorCard = ({
   return (
     <div
       className={cn(
-        "group relative h-full rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/50 overflow-hidden transition-all duration-300 hover:border-purple_blue/50",
-        "hover:shadow-lg dark:hover:shadow-purple_blue/20"
+        "group relative h-full rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/50 overflow-hidden transition-all duration-300 hover:border-primary/50",
+        "hover:shadow-lg dark:hover:shadow-primary/20"
       )}
     >
       {/* Image Section */}
@@ -169,17 +169,17 @@ const DifferentiatorCard = ({
       {/* Content Section */}
       <div className="relative p-5 md:p-6">
         {/* Icon */}
-        <div className="mb-3 text-purple_blue dark:text-purple_blue/80 group-hover:text-purple_blue transition-colors duration-300">
+        <div className="mb-3 text-primary dark:text-primary/80 group-hover:text-primary transition-colors duration-300">
           {differentiator.icon}
         </div>
 
         {/* Number indicator */}
-        <div className="absolute top-4 right-6 text-sm font-bold text-gray-200 dark:text-gray-700 group-hover:text-purple_blue/20 transition-colors duration-300">
+        <div className="absolute top-4 right-6 text-sm font-bold text-gray-200 dark:text-gray-700 group-hover:text-primary/20 transition-colors duration-300">
           {String(differentiator.id).padStart(2, "0")}
         </div>
 
         {/* Title */}
-        <h3 className="text-base md:text-lg font-semibold mb-2 text-dark_black dark:text-white group-hover:text-purple_blue transition-colors duration-300 pr-6">
+        <h3 className="text-base md:text-lg font-semibold mb-2 text-dark_black dark:text-white group-hover:text-primary transition-colors duration-300 pr-6">
           {differentiator.title}
         </h3>
 

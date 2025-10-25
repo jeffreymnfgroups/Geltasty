@@ -22,15 +22,16 @@ function OnlinePresence() {
               </h2>
             </div>
             <div className='grid md:grid-cols-2 gap-x-6 gap-y-8'>
-              {onlinePresenceList?.map((items:any, index:any) => {
+              {onlinePresenceList?.map((items: unknown, index: number) => {
+                const item = items as { image: string; title: string; tag: string[] }
                 return (
                   <div
                     key={index}
                     className='group flex flex-col gap-6 cursor-pointer'>
                     <div className='relative '>
                       <Image
-                        src={items.image}
-                        alt={items.title}
+                        src={item.image}
+                        alt={item.title}
                         width={625}
                         height={410}
                         className='rounded-2xl'
@@ -55,12 +56,12 @@ function OnlinePresence() {
 
                     <div className='flex flex-col items-start gap-4'>
                       <h5 className='group-hover:text-purple_blue'>
-                        {items.title}
+                        {item.title}
                       </h5>
                       <div className='flex gap-3'>
-                        {items.tag?.map((tag:any, index:number) => (
+                        {item.tag?.map((tag: string, idx: number) => (
                           <p
-                            key={index}
+                            key={idx}
                             className='text-sm border border-dark_black/10 dark:border-white/50 w-fit py-1.5 px-4 rounded-full hover:bg-dark_black hover:text-white'>
                             {tag}
                           </p>

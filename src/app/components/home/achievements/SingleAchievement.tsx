@@ -1,10 +1,19 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+interface Achievement {
+  url: string
+  icon: string
+  dark_icon: string
+  sub_title: string
+  title: string
+  year: string
+}
+
 const SingleAchievement = ({
   achievements,
 }: {
-  achievements: any
+  achievements: Achievement
 }) => {
   const { url, icon, dark_icon, sub_title, title, year } = achievements
 

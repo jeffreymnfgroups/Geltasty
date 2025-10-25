@@ -39,22 +39,22 @@ function Solutions() {
               <div className='flex flex-col sm:flex-row gap-4 flex-wrap justify-center w-full'>
                 <Link
                   href='/signup'
-                  className='group w-fit text-white font-medium bg-dark_black rounded-full flex items-center gap-4 py-3 px-6 hover:bg-transparent border border-dark_black transition-all duration-200'>
-                  <span className='group-hover:text-dark_black'>
+                  className='group w-fit text-white font-medium bg-dark_black rounded-full flex items-center gap-4 py-3 px-6 hover:bg-[#0D1B4C] border border-dark_black transition-all duration-200'>
+                  <span>
                     Start Your Journey Today
                   </span>
                 </Link>
                 <Link
                   href='/contact'
-                  className='group w-fit text-dark_black font-medium bg-white rounded-full flex items-center gap-4 py-3 px-6 hover:bg-dark_black border border-dark_black transition-all duration-200'>
-                  <span className='group-hover:text-white'>
+                  className='group w-fit text-dark_black font-medium bg-white rounded-full flex items-center gap-4 py-3 px-6 hover:bg-[#0D1B4C] hover:text-white border border-dark_black transition-all duration-200'>
+                  <span>
                     Schedule Demo
                   </span>
                 </Link>
                 <Link
                   href='/features'
-                  className='group w-fit text-white font-medium bg-dark_black rounded-full flex items-center gap-4 py-3 px-6 hover:bg-transparent border border-dark_black transition-all duration-200'>
-                  <span className='group-hover:text-dark_black'>
+                  className='group w-fit text-white font-medium bg-dark_black rounded-full flex items-center gap-4 py-3 px-6 hover:bg-[#0D1B4C] border border-dark_black transition-all duration-200'>
+                  <span>
                     Learn More
                   </span>
                 </Link>

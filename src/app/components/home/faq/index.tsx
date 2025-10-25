@@ -24,23 +24,24 @@ function Faq() {
                 type='single'
                 collapsible
                 className='flex flex-col gap-4'>
-                {faqList?.map((item:any, index:any) => (
-                  <AccordionItem
+                {faqList?.map((item: unknown, index: number) => {
+                  const faq = item as { faq_que: string; faq_ans: string }
+                  return <AccordionItem
                     key={index}
                     value={`item-${index}`}
                     className='p-6 border border-dark_black/10 dark:border-white/50 group'>
                     <AccordionTrigger className='group-hover:cursor-pointer'>
                       <h4 className='text-dark_black dark:text-white/80'>
-                        {item.faq_que}
+                        {faq.faq_que}
                       </h4>
                     </AccordionTrigger>
                     <AccordionContent>
                       <p className='text-base font-normal text-dark_black/60 dark:text-white/60'>
-                        {item.faq_ans}
+                        {faq.faq_ans}
                       </p>
                     </AccordionContent>
                   </AccordionItem>
-                ))}
+                })}
               </Accordion>
             </div>
           </div>

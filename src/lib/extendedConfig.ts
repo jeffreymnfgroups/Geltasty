@@ -14,7 +14,11 @@ const extendedConfig = {
     yellow_gradient: "#FDF1D3",
     paleYellow: "#F6E683",
     dark_yellow_gradient: "#443f32",
-    dark_blue_gradient: "#303d42"
+    dark_blue_gradient: "#303d42",
+    darkNavy: "#0D1B4C",
+    gold: "#F7B500",
+    goldLight: "#FFCC33",
+    primary: "#F7B500"
   },
   screens: {
     "Xsm": "425px",

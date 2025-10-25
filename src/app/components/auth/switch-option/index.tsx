@@ -5,7 +5,7 @@ const SwitchOption = ({
   setIsPassword,
 }: {
   isPassword: boolean
-  setIsPassword: any
+  setIsPassword: (value: boolean) => void
 }) => {
   return (
     <div className='mx-auto mb-8 flex flex-col items-center justify-center gap-3 rounded-lg border border-dark_black/10 bg-dark_black/5 p-2 md:flex-row '>

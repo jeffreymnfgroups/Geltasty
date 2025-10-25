@@ -128,7 +128,7 @@ export function PlatformFeatures() {
         <div className="w-full py-8 flex justify-center">
           <Link
             href='/contact'
-            className='group bg-purple_blue text-white font-medium flex flex-row justify-between items-center py-2 px-4 rounded-full md:max-w-64 w-full sm:w-auto border border-purple_blue transition-all duration-200 ease-in-out hover:bg-transparent hover:text-purple_blue dark:hover:text-purple_blue'
+            className='group bg-primary text-white font-medium flex flex-row justify-between items-center py-2 px-4 rounded-full md:max-w-64 w-full sm:w-auto border border-primary transition-all duration-200 ease-in-out hover:bg-transparent hover:text-primary dark:hover:text-primary'
           >
             <span className='flex-1 text-center transform transition-transform duration-200 ease-in-out group-hover:scale-95'>
               Explore All Features
@@ -145,7 +145,7 @@ export function PlatformFeatures() {
                 width='40'
                 height='40'
                 rx='20'
-                className='fill-white transition-colors duration-200 ease-in-out group-hover:fill-purple_blue'
+                className='fill-white transition-colors duration-200 ease-in-out group-hover:fill-primary'
               />
               <path
                 d='M15.832 15.3334H24.1654V23.6667'
@@ -180,16 +180,16 @@ const FeatureCard = ({ feature, index }: FeatureCardProps) => {
   return (
     <div
       className={cn(
-        "group relative p-6 md:p-7 rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/50 transition-all duration-300 hover:border-purple_blue/50 overflow-hidden",
-        "hover:shadow-lg dark:hover:shadow-purple_blue/20"
+        "group relative p-6 md:p-7 rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/50 transition-all duration-300 hover:border-primary/50 overflow-hidden",
+        "hover:shadow-lg dark:hover:shadow-primary/20"
       )}
     >
       {/* Background gradient on hover */}
       {isTopRow && (
-        <div className="absolute inset-0 bg-gradient-to-b from-purple_blue/10 dark:from-purple_blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/10 dark:from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
       )}
       {!isTopRow && (
-        <div className="absolute inset-0 bg-gradient-to-t from-purple_blue/10 dark:from-purple_blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/10 dark:from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
       )}
 
       {/* Animated border accent on hover */}
@@ -197,17 +197,17 @@ const FeatureCard = ({ feature, index }: FeatureCardProps) => {
 
       <div className="relative z-10">
         {/* Icon */}
-        <div className="mb-4 text-purple_blue dark:text-purple_blue/80 group-hover:text-purple_blue transition-colors duration-300">
+        <div className="mb-4 text-primary dark:text-primary/80 group-hover:text-primary transition-colors duration-300">
           {feature.icon}
         </div>
 
         {/* Number indicator */}
-        <div className="absolute top-6 right-6 text-lg font-bold text-gray-200 dark:text-gray-700 group-hover:text-purple_blue/20 transition-colors duration-300">
+        <div className="absolute top-6 right-6 text-lg font-bold text-gray-200 dark:text-gray-700 group-hover:text-primary/20 transition-colors duration-300">
           {String(feature.number).padStart(2, "0")}
         </div>
 
         {/* Title */}
-        <h3 className="text-lg font-semibold mb-3 text-dark_black dark:text-white group-hover:text-purple_blue transition-colors duration-300 pr-6">
+        <h3 className="text-lg font-semibold mb-3 text-dark_black dark:text-white group-hover:text-primary transition-colors duration-300 pr-6">
           {feature.title}
         </h3>
 
