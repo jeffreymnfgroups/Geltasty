@@ -35,7 +35,7 @@ function GestaltyDifference() {
       before: "Subjective progress",
       after: "Real-time metrics",
       beforeDetail: "Am I doing enough?",
-      afterDetail: "I&apos;ve completed Stage 3!",
+      afterDetail: "I have completed Stage 3",
       borderColor: "border-l-orange-500",
       gradient: "from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20"
     },
@@ -51,7 +51,7 @@ function GestaltyDifference() {
       ),
       before: "Limited help",
       after: "24/7 support",
-      beforeDetail: "I&apos;m stuck...",
+      beforeDetail: "I am stuck",
       afterDetail: "Mentor feedback received",
       borderColor: "border-l-pink-500",
       gradient: "from-pink-50 to-pink-100 dark:from-pink-900/20 dark:to-pink-800/20"
@@ -66,7 +66,7 @@ function GestaltyDifference() {
       ),
       before: "One-size-fits-all",
       after: "Personalized profile",
-      beforeDetail: "This doesn&apos;t work for me",
+      beforeDetail: "This does not work for me",
       afterDetail: "Perfect for my learning style",
       borderColor: "border-l-yellow-500",
       gradient: "from-yellow-50 to-yellow-100 dark:from-yellow-900/20 dark:to-yellow-800/20"
