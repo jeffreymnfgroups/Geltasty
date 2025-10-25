@@ -15,7 +15,7 @@ const Logo = () => {
                 className='dark:hidden'
             />
             <Image
-                src="/images/logo/DarkModeLogo.svg"
+                src="/images/logo/Logo.svg"
                 alt="logo"
                 width={117}
                 height={34}
