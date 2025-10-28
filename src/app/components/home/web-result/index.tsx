@@ -3,7 +3,7 @@ import { Carousel, Card } from '../../ui/apple-cards-carousel'
 
 const problemCards = [
   {
-    src: '/images/home/problem1.jpg',
+    src: '/images/home/problem1.webp',
     title: 'Lack of Focus and Consistency',
     category: 'Problem 1',
     content: (
@@ -23,7 +23,7 @@ const problemCards = [
     )
   },
   {
-    src: '/images/home/problem2.jpg',
+    src: '/images/home/problem2.webp',
     title: 'Ineffective Study Planning',
     category: 'Problem 2',
     content: (
@@ -43,7 +43,7 @@ const problemCards = [
     )
   },
   {
-    src: '/images/home/problem3.jpg',
+    src: '/images/home/problem3.webp',
     title: 'Weak Study Techniques and Retention',
     category: 'Problem 3',
     content: (
@@ -63,7 +63,7 @@ const problemCards = [
     )
   },
   {
-    src: '/images/home/problem4.jpg',
+    src: '/images/home/problem4.webp',
     title: 'Psychological and Emotional Barriers',
     category: 'Problem 4',
     content: (
@@ -83,7 +83,7 @@ const problemCards = [
     )
   },
   {
-    src: '/images/home/problem5.jpg',
+    src: '/images/home/problem5.webp',
     title: 'Fragmented and Unsystematic Learning',
     category: 'Problem 5',
     content: (
@@ -103,7 +103,7 @@ const problemCards = [
     )
   },
   {
-    src: '/images/home/problem6.png',
+    src: '/images/home/problem6.webp',
     title: 'Misalignment Between Effort and Outcome',
     category: 'Problem 6',
     content: (

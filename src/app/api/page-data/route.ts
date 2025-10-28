@@ -14,19 +14,19 @@ import {
 const avatarList: avatar[] = [
   {
     image: '/images/home/avatar_1.jpg',
-    title: 'Sarah Johnson',
+    title: 'Priya Sharma - NEET AIR 47',
   },
   {
     image: '/images/home/avatar_2.jpg',
-    title: 'Olivia Miller',
+    title: 'Arjun Patel - UPSC AIR 12',
   },
   {
     image: '/images/home/avatar_3.jpg',
-    title: 'Sophia Roberts',
+    title: 'Sneha Reddy - NEET AIR 89',
   },
   {
     image: '/images/home/avatar_4.jpg',
-    title: 'Isabella Clark',
+    title: 'Rahul Kumar - UPSC AIR 156',
   },
 ]
 
@@ -51,31 +51,31 @@ const brandList: brand[] = [
 const innovationList: innovation[] = [
   {
     image: '/images/home/innovation/brand.svg',
-    title: 'Brand\nStrategy',
+    title: 'Learning\nAnalytics',
     bg_color: 'bg-purple/20',
     txt_color: 'text-purple',
   },
   {
     image: '/images/home/innovation/digitalmarketing.svg',
-    title: 'Digital\nMarketing',
+    title: 'Cognitive\nScience',
     bg_color: 'bg-blue/20',
     txt_color: 'text-blue',
   },
   {
     image: '/images/home/innovation/uiux.svg',
-    title: 'UI/UX\nDesign',
+    title: 'Expert\nMentorship',
     bg_color: 'bg-orange/20',
     txt_color: 'text-orange',
   },
   {
     image: '/images/home/innovation/analitics.svg',
-    title: 'Analytics &\nReporting',
+    title: 'Data-Driven\nInsights',
     bg_color: 'bg-green/20',
     txt_color: 'text-green',
   },
   {
     image: '/images/home/innovation/webdevp.svg',
-    title: 'Web\nDevelopment',
+    title: 'Smart\nPlanning',
     bg_color: 'bg-pink/20',
     txt_color: 'text-pink',
   },
@@ -84,56 +84,56 @@ const innovationList: innovation[] = [
 const onlinePresenceList: onlinePresence[] = [
   {
     image: '/images/home/onlinePresence/online_img_1.jpg',
-    title: 'FlowBank',
-    tag: ['UX Research', 'Interface Design'],
-    link: 'https://www.wrappixel.com/',
+    title: 'NEET Success Story',
+    tag: ['Learning Analytics', 'Cognitive Science'],
+    link: 'https://gestalty.com/success-stories',
   },
   {
     image: '/images/home/onlinePresence/online_img_2.jpg',
-    title: 'Academy.co',
-    tag: ['Product Design', 'Interaction Design'],
-    link: 'https://www.wrappixel.com/',
+    title: 'UPSC Achievement',
+    tag: ['Expert Mentorship', 'Data-Driven Learning'],
+    link: 'https://gestalty.com/success-stories',
   },
   {
     image: '/images/home/onlinePresence/online_img_3.jpg',
-    title: 'Genome',
-    tag: ['Brand identity design', 'UX Research'],
-    link: 'https://www.wrappixel.com/',
+    title: 'JEE Preparation',
+    tag: ['Smart Planning', 'Retention System'],
+    link: 'https://gestalty.com/success-stories',
   },
   {
     image: '/images/home/onlinePresence/online_img_4.jpg',
-    title: 'Hotto',
-    tag: ['Visual Storytelling', 'Web & Mobile Design'],
-    link: 'https://www.wrappixel.com/',
+    title: 'Platform Demo',
+    tag: ['Real-time Analytics', 'Mentor Network'],
+    link: 'https://gestalty.com/demo',
   },
 ]
 
 const creativeMindList: creativeMind[] = [
   {
     image: '/images/home/creative/creative_img_1.png',
-    name: 'Logan Dang',
-    position: 'WordPress Developer',
+    name: 'Dr. Priya Sharma',
+    position: 'NEET Mentor - AIR 47',
     twitterLink: 'https://x.com/',
     linkedinLink: 'https://in.linkedin.com/',
   },
   {
     image: '/images/home/creative/creative_img_2.png',
-    name: 'Ana Belić',
-    position: 'Social Media Specialist',
+    name: 'Arjun Patel',
+    position: 'UPSC Mentor - AIR 12',
     twitterLink: 'https://x.com/',
     linkedinLink: 'https://in.linkedin.com/',
   },
   {
     image: '/images/home/creative/creative_img_3.png',
-    name: 'Brian Hanley',
-    position: 'Product Designer',
+    name: 'Dr. Sneha Reddy',
+    position: 'JEE Mentor - AIR 89',
     twitterLink: 'https://x.com/',
     linkedinLink: 'https://in.linkedin.com/',
   },
   {
     image: '/images/home/creative/creative_img_4.png',
-    name: 'Darko Stanković',
-    position: 'UI Designer',
+    name: 'Rahul Kumar',
+    position: 'UPSC Mentor - AIR 156',
     twitterLink: 'https://x.com/',
     linkedinLink: 'https://in.linkedin.com/',
   },
@@ -142,19 +142,19 @@ const creativeMindList: creativeMind[] = [
 const WebResultTagList: WebResultTag[] = [
   {
     image: '/images/home/result/creativity.svg',
-    name: 'Creativity',
+    name: 'Analytics',
     bg_color: 'bg-purple/20',
     txt_color: 'text-purple',
   },
   {
     image: '/images/home/result/innovation.svg',
-    name: 'Innovation',
+    name: 'Mentorship',
     bg_color: 'bg-blue/20',
     txt_color: 'text-blue',
   },
   {
     image: '/images/home/result/strategy.svg',
-    name: 'Strategy',
+    name: 'Science',
     bg_color: 'bg-orange/20',
     txt_color: 'text-orange',
   },
@@ -167,16 +167,16 @@ const startupPlanList: startupPlan[] = [
     descp_color: 'dark_black/60',
     border_color: 'border-dark_black/10',
     plan_name: 'Starter',
-    plan_descp: 'For companies who need design support. One request at a time',
-    plan_price: '$2500',
+    plan_descp: 'Perfect for focused exam preparation with essential features',
+    plan_price: '₹2,999',
     icon_img: '/images/home/startupPlan/white_tick.svg',
     plan_feature: [
-      'Design Updates Every 2 Days',
-      'Mid-level Designer',
-      'SEO optimization',
-      'Monthly analytics',
-      '2x Calls Per Month',
-      'License free assets',
+      'Learning Analytics Dashboard',
+      'Basic Mentor Support',
+      'SMART Goal Framework',
+      'Progress Tracking',
+      '2x Mentor Calls Per Month',
+      'Mobile App Access',
     ],
   },
   {
@@ -185,50 +185,50 @@ const startupPlanList: startupPlan[] = [
     descp_color: 'white/60',
     border_color: 'border-white/10',
     plan_name: 'Pro',
-    plan_descp: '2x the speed. Great for an MVP, Web App or complex problem',
-    plan_price: '$3800',
+    plan_descp: 'Complete preparation ecosystem with expert mentorship and advanced analytics',
+    plan_price: '₹4,999',
     icon_img: '/images/home/startupPlan/black_tick.svg',
     plan_feature: [
-      'Design Updates Daily',
-      'Senior-level Designer',
-      'AI Advisory Framework',
-      'Full-service Creative Team',
-      '4x Calls Per Month',
-      'License free assets',
+      'Advanced Learning Analytics',
+      '1:1 Expert Mentor Sessions',
+      'Cognitive Science Tools',
+      'Retention & Revision System',
+      '4x Mentor Calls Per Month',
+      'Parent Dashboard Access',
     ],
   },
 ]
 
 const faqList: faq[] = [
   {
-    faq_que: 'What services does Awake Agency offer?',
+    faq_que: 'What makes Gestalty different from other exam preparation platforms?',
     faq_ans:
-      'Yes, we provide post-launch support to ensure smooth implementation and offer ongoing maintenance packages for clients needing regular updates or technical assistance.',
+      'Gestalty combines cognitive science, data analytics, and expert mentorship to provide personalized, evidence-based preparation. We track your learning through four distinct stages (Reading, Learning, Revision, Practice) and provide real-time insights to optimize your study strategy.',
   },
   {
-    faq_que: 'How long does a typical project take?',
+    faq_que: 'How does the mentor matching work?',
     faq_ans:
-      'Yes, we provide post-launch support to ensure smooth implementation and offer ongoing maintenance packages for clients needing regular updates or technical assistance.',
+      'Our AI-powered system matches you with verified successful aspirants based on your exam type, learning style, and goals. All mentors are trained in our methodology and provide 1:1 guidance using your performance data.',
   },
   {
-    faq_que: 'How is pricing structured at Awake Agency?',
+    faq_que: 'What exams does Gestalty support?',
     faq_ans:
-      'Yes, we provide post-launch support to ensure smooth implementation and offer ongoing maintenance packages for clients needing regular updates or technical assistance.',
+      'We currently support NEET, UPSC, and JEE preparation with specialized content, mentors, and analytics for each exam. Our platform adapts to the specific requirements and patterns of each competitive exam.',
   },
   {
-    faq_que: 'Do you offer ongoing support after project completion?',
+    faq_que: 'How does the learning analytics work?',
     faq_ans:
-      'Yes, we provide post-launch support to ensure smooth implementation and offer ongoing maintenance packages for clients needing regular updates or technical assistance.',
+      'Our system tracks your progress through four cognitive stages, measures learning quality (not just time spent), and provides insights on retention, application ability, and areas needing improvement. All metrics are based on proven cognitive science research.',
   },
   {
-    faq_que: 'How often will I receive updates on my project?',
+    faq_que: 'Can parents track their child\'s progress?',
     faq_ans:
-      'Yes, we provide post-launch support to ensure smooth implementation and offer ongoing maintenance packages for clients needing regular updates or technical assistance.',
+      'Yes, we provide a dedicated parent dashboard that shows overall progress, consistency metrics, and mentor feedback while respecting student privacy. Students control what information is shared.',
   },
   {
-    faq_que: 'How often will I receive updates on my project?',
+    faq_que: 'Is there a mobile app available?',
     faq_ans:
-      'Yes, we provide post-launch support to ensure smooth implementation and offer ongoing maintenance packages for clients needing regular updates or technical assistance.',
+      'Yes, our mobile app provides seamless access to all features including learning analytics, mentor communication, goal tracking, and study reminders. Available on both iOS and Android platforms.',
   },
 ]
 
@@ -236,28 +236,28 @@ const achievementsList: achievements[] = [
   {
     icon: '/images/home/achievement/framer_award.svg',
     dark_icon: '/images/home/achievement/dark_framer_award.svg',
-    sub_title: 'Framer Awards',
+    sub_title: 'EdTech Innovation Award',
     title:
-      'Celebrated for cutting-edge interaction design and seamless user experiences.',
+      'Recognized for revolutionizing exam preparation through cognitive science and data analytics.',
     year: '2024',
-    url: 'https://www.framer.com/@wrap-pixel/',
+    url: 'https://gestalty.com/awards',
   },
   {
     icon: '/images/home/achievement/dribble_award.svg',
     dark_icon: '/images/home/achievement/dribble_award.svg',
-    sub_title: 'Dribbble Awards',
-    title: 'Recognized for creative excellence and innovative design solutions',
+    sub_title: 'Best Learning Platform',
+    title: 'Awarded for exceptional student outcomes and mentor satisfaction',
     year: '2023',
-    url: 'https://www.framer.com/@wrap-pixel/',
+    url: 'https://gestalty.com/awards',
   },
   {
     icon: '/images/home/achievement/awward_award.svg',
     dark_icon: '/images/home/achievement/dark_awward_award.svg',
-    sub_title: 'awwwards Awards',
+    sub_title: 'Cognitive Science Excellence',
     title:
-      'Honored with the Best Website Design for creativity, usability, and innovation.',
+      'Honored for integrating research-backed learning methodologies into practical preparation tools.',
     year: '2022',
-    url: 'https://www.framer.com/@wrap-pixel/',
+    url: 'https://gestalty.com/awards',
   },
 ]
 

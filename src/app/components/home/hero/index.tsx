@@ -153,7 +153,7 @@ function HeroSection() {
               {...bottomAnimation}
               className='flex justify-center mt-8'>
               <Image
-                src='/images/home/dashboard.webp'
+                src='/images/home/dashboard.png'
                 alt='Dashboard Preview'
                 width={800}
                 height={600}

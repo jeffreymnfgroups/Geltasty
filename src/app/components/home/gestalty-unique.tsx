@@ -27,7 +27,7 @@ const differentiators: Differentiator[] = [
     description:
       "Convert 'I feel prepared' into hard metrics that show exactly where you stand and what needs work.",
     icon: <TrendingUp className="w-8 h-8" />,
-    image: "/images/home/innovation/card1.jpg",
+    image: "/images/home/innovation/card1.webp",
     span: "col-span-1 lg:col-span-2",
   },
   {
@@ -36,7 +36,7 @@ const differentiators: Differentiator[] = [
     description:
       "Statistics, cognitive psychology, and evidence-based pedagogy unite for genuine impact—not just features.",
     icon: <Beaker className="w-8 h-8" />,
-    image: "/images/home/innovation/card2.jpg",
+    image: "/images/home/innovation/card2.webp",
     span: "col-span-1 lg:col-span-2",
   },
   {
@@ -45,7 +45,7 @@ const differentiators: Differentiator[] = [
     description:
       "Intelligent alerts and interventions weeks before exams based on your data trends, not after failure.",
     icon: <AlertCircle className="w-8 h-8" />,
-    image: "/images/home/innovation/card3.jpg",
+    image: "/images/home/innovation/card3.webp",
     span: "col-span-1 lg:col-span-2",
   },
   {
@@ -54,7 +54,7 @@ const differentiators: Differentiator[] = [
     description:
       "Students, mentors, and parents in one closed-loop system with transparent, real-time visibility.",
     icon: <Network className="w-8 h-8" />,
-    image: "/images/home/innovation/card4.jpg",
+    image: "/images/home/innovation/card4.webp",
     span: "col-span-1 lg:col-span-2",
   },
   {
@@ -63,7 +63,7 @@ const differentiators: Differentiator[] = [
     description:
       "Develop metacognitive abilities and strategic learning approaches that serve beyond just one exam.",
     icon: <Lightbulb className="w-8 h-8" />,
-    image: "/images/home/innovation/card5.jpg",
+    image: "/images/home/innovation/card5.webp",
     span: "col-span-1 lg:col-span-2",
   },
 ];

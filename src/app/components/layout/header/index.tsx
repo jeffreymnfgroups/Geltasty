@@ -90,7 +90,7 @@ const Header = () => {
                 </div>
               ) : (
                 <div className='flex items-center gap-2'>
-                  <Link
+                  {/* <Link
                     href={'/signin'}
                     className='hidden lg:block bg-transparent border border-dark_black dark:border-white/50 text-primary px-2.5 xl:px-4 py-2 rounded-full hover:bg-dark_black hover:text-white'>
                     Login
@@ -99,6 +99,11 @@ const Header = () => {
                     href={'/signup'}
                     className='hidden lg:block text-white px-2.5 xl:px-4 py-2  bg-dark_black dark:bg-white/20 rounded-full hover:opacity-90'>
                     Get Started
+                  </Link> */}
+                  <Link
+                    href={'/contact'}
+                    className='hidden lg:block text-white px-2.5 xl:px-4 py-2 bg-primary hover:bg-primary/90 rounded-full transition-all duration-200 ease-in-out transform hover:scale-105 shadow-lg'>
+                    Contact
                   </Link>
                 </div>
               )}
@@ -194,7 +199,7 @@ const Header = () => {
                   </>
                 ) : (
                   <>
-                    <Link
+                    {/* <Link
                       href={'/signin'}
                       className='w-full border border-dark_black dark:border-white text-primary px-4 py-2 rounded-md hover:bg-dark_black dark:hover:bg-white hover:text-white dark:hover:text-dark_black'>
                       Login
@@ -203,6 +208,11 @@ const Header = () => {
                       href={'/signup'}
                       className='w-full text-white dark:text-dark_black px-4 py-2 bg-dark_black dark:bg-white rounded-md hover:opacity-90'>
                       Get Started
+                    </Link> */}
+                    <Link
+                      href={'/contact'}
+                      className='w-full text-white px-4 py-2 bg-primary hover:bg-primary/90 rounded-md transition-all duration-200 ease-in-out transform hover:scale-105 shadow-lg'>
+                      Contact
                     </Link>
                   </>
                 )}
