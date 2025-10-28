@@ -48,7 +48,7 @@ function HeroSection() {
                 <Link
                   href='/contact'
                   className='group bg-primary text-white font-medium flex flex-row justify-between items-center py-2 px-5 rounded-full max-w-64 w-full md:py-3 border border-primary transition-all duration-200 ease-in-out hover:bg-transparent hover:text-primary'>
-                  <span className='flex text-start transform transition-transform duration-200 ease-in-out group-hover:translate-x-28'>
+                  <span className='flex text-start transform transition-transform duration-200 ease-in-out group-hover:translate-x-16'>
                     Get Started Free
                   </span>
                   <svg
@@ -85,7 +85,7 @@ function HeroSection() {
                 <Link
                   href='/contact'
                   className='group bg-transparent text-primary font-medium flex flex-row justify-between items-center py-2 px-5 rounded-full max-w-64 w-full md:py-3 border border-primary transition-all duration-200 ease-in-out hover:bg-primary hover:text-white'>
-                  <span className='flex text-start transform transition-transform duration-200 ease-in-out group-hover:translate-x-28'>
+                  <span className='flex text-start transform transition-transform duration-200 ease-in-out group-hover:translate-x-16'>
                     Schedule Demo
                   </span>
                   <svg
