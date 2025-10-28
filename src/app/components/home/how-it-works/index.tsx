@@ -13,6 +13,7 @@ const HowItWorks = () => {
 
   const cardStyle = {
     height: '60vh',
+    minHeight: '400px',
     maxHeight: '600px',
     borderRadius: '20px',
     transition: 'transform 0.5s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1)',
@@ -134,14 +135,14 @@ const HowItWorks = () => {
                   }}
                 ></div>
 
-                <div className="absolute top-4 right-4 z-30">
-                  <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
-                    <span className="text-sm font-medium">Step 1: The Seed</span>
+                <div className="absolute top-3 left-1/2 transform -translate-x-1/2 sm:left-auto sm:right-4 sm:top-4 sm:transform-none z-30">
+                  <div className="inline-flex items-center justify-center px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
+                    <span className="text-xs sm:text-sm font-medium">Step 1: The Seed</span>
                   </div>
                 </div>
 
-                {/* Video on Right */}
-                <div className="absolute right-0 top-0 bottom-0 z-20 w-3/10 overflow-hidden rounded-l-3xl">
+                {/* Video on Right - Hidden on mobile */}
+                <div className="hidden sm:block absolute right-0 top-0 bottom-0 z-20 w-2/5 md:w-3/10 overflow-hidden rounded-l-3xl">
                   <div className="absolute inset-0" style={{
                     backgroundImage: "linear-gradient(to right, rgba(27,29,30,0.95) 0%, rgba(27,29,30,0.6) 30%, rgba(27,29,30,0.2) 70%, transparent 100%)",
                     pointerEvents: 'none'
@@ -157,15 +158,19 @@ const HowItWorks = () => {
                   </video>
                 </div>
 
-                <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-center pr-64 md:pr-72">
-                  <div className="max-w-lg">
+                <div className="relative z-10 p-4 sm:p-6 md:p-8 h-full flex items-center sm:pr-48 md:pr-64 lg:pr-72">
+                  <div className="w-full sm:max-w-lg text-center sm:text-left">
                     <TextGenerateEffect words="Create Your Profile" duration={0.8} visible={isFirstCardVisible} />
-                    <p className="text-white/90 text-base sm:text-sm md:text-base leading-relaxed mb-6 font-medium">
+                    <p className="text-white/90 text-sm sm:text-base leading-relaxed mb-4 sm:mb-6 font-medium">
                       Set up your personalized learning profile and take our assessment. Your baseline learning style is identified, and your potential is unlocked.
                     </p>
-                    <div className="inline-flex items-center gap-2 px-4 py-3 rounded-lg bg-green-500/20 border border-green-500/40">
-                      <span className="text-green-300">✓</span>
-                      <span className="text-green-100 text-sm font-medium">Assessment Completed! Your baseline learning style profile is ready.</span>
+                    <div className="flex items-center gap-3">
+                      <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
+                        <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <span className="text-white/90 text-sm font-medium">Assessment Completed! Your baseline learning style profile is ready.</span>
                     </div>
                   </div>
                 </div>
@@ -199,14 +204,14 @@ const HowItWorks = () => {
                   }}
                 ></div>
 
-                <div className="absolute top-4 right-4 z-30">
-                  <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
-                    <span className="text-sm font-medium">Step 2: The Growth</span>
+                <div className="absolute top-3 left-1/2 transform -translate-x-1/2 sm:left-auto sm:right-4 sm:top-4 sm:transform-none z-30">
+                  <div className="inline-flex items-center justify-center px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
+                    <span className="text-xs sm:text-sm font-medium">Step 2: The Growth</span>
                   </div>
                 </div>
 
-                {/* Video on Right */}
-                <div className="absolute right-0 top-0 bottom-0 z-20 w-3/10 overflow-hidden rounded-l-3xl">
+                {/* Video on Right - Hidden on mobile */}
+                <div className="hidden sm:block absolute right-0 top-0 bottom-0 z-20 w-2/5 md:w-3/10 overflow-hidden rounded-l-3xl">
                   <div className="absolute inset-0" style={{
                     backgroundImage: "linear-gradient(to right, rgba(27,29,30,0.95) 0%, rgba(27,29,30,0.6) 30%, rgba(27,29,30,0.2) 70%, transparent 100%)",
                     pointerEvents: 'none'
@@ -222,15 +227,19 @@ const HowItWorks = () => {
                   </video>
                 </div>
 
-                <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-center pr-64 md:pr-72">
-                  <div className="max-w-lg">
+                <div className="relative z-10 p-4 sm:p-6 md:p-8 h-full flex items-center sm:pr-48 md:pr-64 lg:pr-72">
+                  <div className="w-full sm:max-w-lg text-center sm:text-left">
                     <TextGenerateEffect words="Match with Expert Mentor" duration={0.8} visible={isSecondCardVisible} />
-                    <p className="text-white/90 text-base sm:text-sm md:text-base leading-relaxed mb-6 font-medium">
+                    <p className="text-white/90 text-sm sm:text-base leading-relaxed mb-4 sm:mb-6 font-medium">
                       Get connected with a NEET/UPSC expert mentor. Together, you&apos;ll set SMART goals and create a personalized study roadmap tailored to your needs.
                     </p>
-                    <div className="inline-flex items-center gap-2 px-4 py-3 rounded-lg bg-green-500/20 border border-green-500/40">
-                      <span className="text-green-300">✓</span>
-                      <span className="text-green-100 text-sm font-medium">Goals Set • Study Roadmap Ready</span>
+                    <div className="flex items-center gap-3">
+                      <div className="w-5 h-5 rounded-full bg-blue-500 flex items-center justify-center">
+                        <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <span className="text-white/90 text-sm font-medium">Goals Set • Study Roadmap Ready</span>
                     </div>
                   </div>
                 </div>
@@ -264,14 +273,14 @@ const HowItWorks = () => {
                   }}
                 ></div>
 
-                <div className="absolute top-4 right-4 z-30">
-                  <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
-                    <span className="text-sm font-medium">Step 3: The Mastery</span>
+                <div className="absolute top-3 left-1/2 transform -translate-x-1/2 sm:left-auto sm:right-4 sm:top-4 sm:transform-none z-30">
+                  <div className="inline-flex items-center justify-center px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
+                    <span className="text-xs sm:text-sm font-medium">Step 3: The Mastery</span>
                   </div>
                 </div>
 
-                {/* Video on Right */}
-                <div className="absolute right-0 top-0 bottom-0 z-20 w-3/10 overflow-hidden rounded-l-3xl">
+                {/* Video on Right - Hidden on mobile */}
+                <div className="hidden sm:block absolute right-0 top-0 bottom-0 z-20 w-2/5 md:w-3/10 overflow-hidden rounded-l-3xl">
                   <div className="absolute inset-0" style={{
                     backgroundImage: "linear-gradient(to right, rgba(27,29,30,0.95) 0%, rgba(27,29,30,0.6) 30%, rgba(27,29,30,0.2) 70%, transparent 100%)",
                     pointerEvents: 'none'
@@ -287,24 +296,36 @@ const HowItWorks = () => {
                   </video>
                 </div>
 
-                <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-center pr-64 md:pr-72">
-                  <div className="max-w-lg">
+                <div className="relative z-10 p-4 sm:p-6 md:p-8 h-full flex items-center sm:pr-48 md:pr-64 lg:pr-72">
+                  <div className="w-full sm:max-w-lg text-center sm:text-left">
                     <TextGenerateEffect words="Learn with Real-Time Insights" duration={0.8} visible={isThirdCardVisible} />
-                    <p className="text-white/90 text-base sm:text-sm md:text-base leading-relaxed mb-6 font-medium">
+                    <p className="text-white/90 text-sm sm:text-base leading-relaxed mb-4 sm:mb-6 font-medium">
                       Experience dynamic learning powered by AI analytics. Track your progress, identify weak areas, maintain streaks, and master each stage from Reading to Practice.
                     </p>
-                    <div className="space-y-3">
-                      <div className="inline-flex items-center gap-2 px-4 py-3 rounded-lg bg-green-500/20 border border-green-500/40">
-                        <span className="text-green-300">✓</span>
-                        <span className="text-green-100 text-sm font-medium">Weak Area Improved: +20%</span>
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-3">
+                        <div className="w-5 h-5 rounded-full bg-emerald-500 flex items-center justify-center">
+                          <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                        </div>
+                        <span className="text-white/90 text-sm font-medium">Weak Area Improved: +20%</span>
                       </div>
-                      <div className="inline-flex items-center gap-2 px-4 py-3 rounded-lg bg-green-500/20 border border-green-500/40 ml-2">
-                        <span className="text-green-300">✓</span>
-                        <span className="text-green-100 text-sm font-medium">Streak: 14 Days</span>
+                      <div className="flex items-center gap-3">
+                        <div className="w-5 h-5 rounded-full bg-orange-500 flex items-center justify-center">
+                          <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                        </div>
+                        <span className="text-white/90 text-sm font-medium">Streak: 14 Days</span>
                       </div>
-                      <div className="inline-flex items-center gap-2 px-4 py-3 rounded-lg bg-green-500/20 border border-green-500/40">
-                        <span className="text-green-300">✓</span>
-                        <span className="text-green-100 text-sm font-medium">Mastered All Stages</span>
+                      <div className="flex items-center gap-3">
+                        <div className="w-5 h-5 rounded-full bg-purple-500 flex items-center justify-center">
+                          <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                        </div>
+                        <span className="text-white/90 text-sm font-medium">Mastered All Stages</span>
                       </div>
                     </div>
                   </div>

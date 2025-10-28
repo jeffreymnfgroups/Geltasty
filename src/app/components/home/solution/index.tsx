@@ -73,7 +73,7 @@ function Solutions() {
                   </div>
                   
                   {/* App Store Badges */}
-                  <div className='flex flex-col sm:flex-row gap-4'>
+                  <div className='flex flex-col sm:flex-row gap-4 items-center justify-center'>
                     <a
                       href='https://apps.apple.com'
                       target='_blank'

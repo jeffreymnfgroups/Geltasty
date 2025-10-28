@@ -26,7 +26,7 @@ const differentiators: Differentiator[] = [
     title: "We Turn Feelings into Facts",
     description:
       "Convert 'I feel prepared' into hard metrics that show exactly where you stand and what needs work.",
-    icon: <TrendingUp className="w-8 h-8" />,
+    icon: <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />,
     image: "/images/home/innovation/card1.webp",
     span: "col-span-1 lg:col-span-2",
   },
@@ -35,7 +35,7 @@ const differentiators: Differentiator[] = [
     title: "We Blend Multiple Sciences",
     description:
       "Statistics, cognitive psychology, and evidence-based pedagogy unite for genuine impact—not just features.",
-    icon: <Beaker className="w-8 h-8" />,
+    icon: <Beaker className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />,
     image: "/images/home/innovation/card2.webp",
     span: "col-span-1 lg:col-span-2",
   },
@@ -44,7 +44,7 @@ const differentiators: Differentiator[] = [
     title: "We Intervene Before It's Too Late",
     description:
       "Intelligent alerts and interventions weeks before exams based on your data trends, not after failure.",
-    icon: <AlertCircle className="w-8 h-8" />,
+    icon: <AlertCircle className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />,
     image: "/images/home/innovation/card3.webp",
     span: "col-span-1 lg:col-span-2",
   },
@@ -53,7 +53,7 @@ const differentiators: Differentiator[] = [
     title: "We Connect Your Support System",
     description:
       "Students, mentors, and parents in one closed-loop system with transparent, real-time visibility.",
-    icon: <Network className="w-8 h-8" />,
+    icon: <Network className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />,
     image: "/images/home/innovation/card4.webp",
     span: "col-span-1 lg:col-span-2",
   },
@@ -62,7 +62,7 @@ const differentiators: Differentiator[] = [
     title: "We Build Lifelong Skills",
     description:
       "Develop metacognitive abilities and strategic learning approaches that serve beyond just one exam.",
-    icon: <Lightbulb className="w-8 h-8" />,
+    icon: <Lightbulb className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />,
     image: "/images/home/innovation/card5.webp",
     span: "col-span-1 lg:col-span-2",
   },
@@ -156,7 +156,7 @@ const DifferentiatorCard = ({
       )}
     >
       {/* Image Section */}
-      <div className="relative h-48 md:h-40 overflow-hidden bg-gray-200 dark:bg-gray-800">
+      <div className="relative aspect-square overflow-hidden bg-gray-200 dark:bg-gray-800">
         <Image
           src={differentiator.image}
           alt={differentiator.title}
@@ -167,24 +167,24 @@ const DifferentiatorCard = ({
       </div>
 
       {/* Content Section */}
-      <div className="relative p-5 md:p-6">
+      <div className="relative p-3 sm:p-4 md:p-6">
         {/* Icon */}
-        <div className="mb-3 text-primary dark:text-primary/80 group-hover:text-primary transition-colors duration-300">
+        <div className="mb-1 sm:mb-2 text-primary dark:text-primary/80 group-hover:text-primary transition-colors duration-300">
           {differentiator.icon}
         </div>
 
         {/* Number indicator */}
-        <div className="absolute top-4 right-6 text-sm font-bold text-gray-200 dark:text-gray-700 group-hover:text-primary/20 transition-colors duration-300">
+        <div className="absolute top-2 right-3 sm:top-4 sm:right-6 text-xs sm:text-sm font-bold text-gray-200 dark:text-gray-700 group-hover:text-primary/20 transition-colors duration-300">
           {String(differentiator.id).padStart(2, "0")}
         </div>
 
         {/* Title */}
-        <h3 className="text-base md:text-lg font-semibold mb-2 text-dark_black dark:text-white group-hover:text-primary transition-colors duration-300 pr-6">
+        <h3 className="text-xs sm:text-sm md:text-lg font-semibold mb-1 text-dark_black dark:text-white group-hover:text-primary transition-colors duration-300 pr-6">
           {differentiator.title}
         </h3>
 
         {/* Description */}
-        <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+        <p className="text-xs text-gray-600 dark:text-gray-400 leading-tight">
           {differentiator.description}
         </p>
       </div>
