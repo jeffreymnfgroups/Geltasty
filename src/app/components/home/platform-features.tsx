@@ -128,7 +128,7 @@ export function PlatformFeatures() {
         <div className="w-full py-8 flex justify-center">
           <Link
             href='/contact'
-            className='group bg-primary text-white font-medium flex flex-row justify-between items-center py-2 px-4 rounded-full md:max-w-64 w-full sm:w-auto border border-primary transition-all duration-200 ease-in-out hover:bg-transparent hover:text-primary dark:hover:text-primary'
+            className='group bg-primary text-white font-medium flex flex-row justify-between items-center py-2 px-6 rounded-full md:max-w-96 w-full sm:w-auto border border-primary transition-all duration-200 ease-in-out hover:bg-transparent hover:text-primary dark:hover:text-primary'
           >
             <span className='flex-1 text-center transform transition-transform duration-200 ease-in-out group-hover:scale-95'>
               Explore All Features
@@ -139,7 +139,7 @@ export function PlatformFeatures() {
               viewBox='0 0 40 40'
               fill='none'
               xmlns='http://www.w3.org/2000/svg'
-              className='flex-shrink-0 transform transition-transform duration-200 ease-in-out group-hover:scale-90 group-hover:rotate-45'
+              className='flex-shrink-0 ml-2 transform transition-transform duration-200 ease-in-out group-hover:scale-90 group-hover:rotate-45'
             >
               <rect
                 width='40'

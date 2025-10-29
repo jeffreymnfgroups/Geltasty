@@ -99,7 +99,7 @@ const Footer = () => {
                   <ul className='flex flex-col gap-2'>
                     <li><Link href="/get-started" className='text-dark_black/60 hover:text-black dark:text-white/60 dark:hover:text-white text-sm'>Get Started</Link></li>
                     <li><Link href="/pricing" className='text-dark_black/60 hover:text-black dark:text-white/60 dark:hover:text-white text-sm'>View Pricing</Link></li>
-                    <li><Link href="/demo" className='text-dark_black/60 hover:text-black dark:text-white/60 dark:hover:text-white text-sm'>Schedule Demo</Link></li>
+                    <li><Link href="https://calendly.com/dimentussolutions/30min" target="_blank" rel="noopener noreferrer" className='text-dark_black/60 hover:text-black dark:text-white/60 dark:hover:text-white text-sm'>Schedule Demo</Link></li>
                   </ul>
                 </div>
                 <div>

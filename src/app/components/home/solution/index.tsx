@@ -19,7 +19,7 @@ function Solutions() {
         <div className='container'>
           <div
             ref={ref}
-            className='py-16 md:py-28 px-6 border border-dark_black/10 rounded-3xl bg-[linear-gradient(90deg,#CDEFFB_0%,#FFFFFF_33.23%,#FFFFFF_65.77%,#FDEECB_100%)] backdrop-blur-[200px] dark:opacity-80'>
+            className='py-16 md:py-28 px-8 border border-dark_black/10 rounded-3xl bg-[linear-gradient(90deg,#CDEFFB_0%,#FFFFFF_33.23%,#FFFFFF_65.77%,#FDEECB_100%)] backdrop-blur-[200px] dark:opacity-80'>
             <motion.div
               {...bottomAnimation}
               className='flex flex-col gap-8 items-center md:max-w-4xl mx-auto'>
@@ -39,21 +39,23 @@ function Solutions() {
               <div className='flex flex-col sm:flex-row gap-4 flex-wrap justify-center w-full'>
                 <Link
                   href='/signup'
-                  className='group w-fit text-white font-medium bg-dark_black rounded-full flex items-center gap-4 py-3 px-6 hover:bg-[#0D1B4C] border border-dark_black transition-all duration-200'>
+                  className='group w-fit text-white font-medium bg-dark_black rounded-full flex items-center gap-4 py-3 px-8 hover:bg-[#0D1B4C] border border-dark_black transition-all duration-200'>
                   <span>
                     Start Your Journey Today
                   </span>
                 </Link>
                 <Link
-                  href='/contact'
-                  className='group w-fit text-dark_black font-medium bg-white rounded-full flex items-center gap-4 py-3 px-6 hover:bg-[#0D1B4C] hover:text-white border border-dark_black transition-all duration-200'>
+                  href='https://calendly.com/dimentussolutions/30min'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='group w-fit text-dark_black font-medium bg-white rounded-full flex items-center gap-4 py-3 px-8 hover:bg-[#0D1B4C] hover:text-white border border-dark_black transition-all duration-200'>
                   <span>
                     Schedule Demo
                   </span>
                 </Link>
                 <Link
                   href='/features'
-                  className='group w-fit text-white font-medium bg-dark_black rounded-full flex items-center gap-4 py-3 px-6 hover:bg-[#0D1B4C] border border-dark_black transition-all duration-200'>
+                  className='group w-fit text-white font-medium bg-dark_black rounded-full flex items-center gap-4 py-3 px-8 hover:bg-[#0D1B4C] border border-dark_black transition-all duration-200'>
                   <span>
                     Learn More
                   </span>
