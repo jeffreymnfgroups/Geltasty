@@ -89,150 +89,206 @@ function GestaltyDifference() {
   ]
 
   return (
-    <section className='py-20 bg-white dark:bg-gray-900'>
+    <section className='2xl:py-20 py-11 bg-white dark:bg-gray-900'>
       <div className='container'>
-        {/* Header */}
-        <motion.div
-          ref={ref}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          className='text-center mb-16 md:mb-24'
-        >
-          <motion.h2 
-            className='text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 brockmann-font text-dark_black dark:text-white'
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.6 }}
+        <div className='flex flex-col gap-12'>
+          {/* Header */}
+          <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            className='text-center'
           >
-            The Gestalty Difference From
-            <br />
-            <span className='instrument-font italic font-normal text-primary dark:text-gold-light'>
-             Guesswork to Precision
-            </span>
-          </motion.h2>
-          <motion.p 
-            className='text-lg md:text-xl lg:text-2xl text-gray-700 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed font-light tracking-wide'
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            Experience the transformation from chaotic learning to structured, science-driven preparation
-          </motion.p>
-        </motion.div>
-
-        {/* Comparison Grid */}
-        <div className='space-y-4 mb-12'>
-          {transformations.map((item, index) => (
-            <motion.div
-              key={index}
+            <motion.h2 
+              className='text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 brockmann-font text-dark_black dark:text-white'
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-              className={`group relative bg-gradient-to-r ${item.gradient} backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-gray-800 transition-all duration-300 ${
-                hoveredIndex === index ? 'shadow-xl scale-[1.02]' : 'shadow-sm hover:shadow-lg'
-              }`}
+              transition={{ duration: 0.6 }}
             >
-              <div className='grid md:grid-cols-[120px_1fr_60px_1fr] gap-4 p-5 lg:p-6'>
-                {/* Label */}
-                <div className='hidden md:flex items-start pt-1'>
-                  <span className='text-xs font-bold tracking-widest uppercase text-gray-500 dark:text-gray-500'>
-                    {item.label}
-                  </span>
-                </div>
+              The Gestalty Difference From
+              <br />
+              <span className='instrument-font italic font-normal text-primary dark:text-gold-light'>
+               Guesswork to Precision
+              </span>
+            </motion.h2>
+            <motion.p 
+              className='text-base md:text-lg lg:text-xl text-gray-700 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed font-light tracking-wide px-4'
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              Experience the transformation from chaotic learning to structured, science-driven preparation
+            </motion.p>
+          </motion.div>
 
-                {/* Before State */}
-                <div className='space-y-3'>
-                  <span className='text-xs font-semibold text-red-600 dark:text-red-400 uppercase tracking-wide block'>
-                    Before
-                  </span>
+          {/* Comparison Grid */}
+          <div className='space-y-4'>
+            {transformations.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                className={`group relative bg-gradient-to-r ${item.gradient} backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-gray-800 transition-all duration-300 ${
+                  hoveredIndex === index ? 'shadow-xl md:scale-[1.02]' : 'shadow-sm hover:shadow-lg'
+                }`}
+              >
+                {/* Mobile Layout */}
+                <div className='md:hidden p-4 space-y-4'>
+                  {/* Label - Mobile */}
+                  <div className='flex items-center gap-2'>
+                    <span className='text-xs font-bold tracking-widest uppercase text-gray-500 dark:text-gray-500'>
+                      {item.label}
+                    </span>
+                  </div>
+
+                  {/* Before State - Mobile */}
                   <div className='space-y-2'>
-                    <h3 className='text-lg lg:text-xl font-semibold text-gray-900 dark:text-white'>
-                      {item.before}
-                    </h3>
-                    <p className='text-sm text-gray-600 dark:text-gray-400 italic'>
-                      &quot;{item.beforeDetail}&quot;
-                    </p>
+                    <span className='text-xs font-semibold text-red-600 dark:text-red-400 uppercase tracking-wide block'>
+                      Before
+                    </span>
+                    <div className='space-y-1'>
+                      <h3 className='text-base font-semibold text-gray-900 dark:text-white'>
+                        {item.before}
+                      </h3>
+                      <p className='text-sm text-gray-600 dark:text-gray-400 italic'>
+                        &quot;{item.beforeDetail}&quot;
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Arrow - Mobile (pointing down) */}
+                  <div className='flex justify-center py-2'>
+                    <motion.div
+                      animate={hoveredIndex === index ? { y: [0, 4, 0] } : { y: 0 }}
+                      transition={{ duration: 1, repeat: hoveredIndex === index ? Infinity : 0 }}
+                      className='w-8 h-8 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center text-white shadow-lg'
+                    >
+                      <svg className="w-4 h-4 rotate-90" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </motion.div>
+                  </div>
+
+                  {/* After State - Mobile */}
+                  <div className='space-y-2'>
+                    <span className='text-xs font-semibold text-green-600 dark:text-green-400 uppercase tracking-wide block'>
+                      After
+                    </span>
+                    <div className='space-y-1'>
+                      <h3 className='text-base font-semibold text-gray-900 dark:text-white'>
+                        {item.after}
+                      </h3>
+                      <p className='text-sm text-gray-600 dark:text-gray-400 italic'>
+                        &quot;{item.afterDetail}&quot;
+                      </p>
+                    </div>
                   </div>
                 </div>
 
-                {/* Simple Arrow */}
-                <div className='flex justify-center items-center'>
-                  <motion.div
-                    animate={hoveredIndex === index ? { x: [0, 8, 0] } : { x: 0 }}
-                    transition={{ duration: 1, repeat: hoveredIndex === index ? Infinity : 0 }}
-                    className='w-10 h-10 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center text-white shadow-lg'
-                  >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                  </motion.div>
-                </div>
+                {/* Desktop Layout */}
+                <div className='hidden md:grid md:grid-cols-[120px_1fr_60px_1fr] gap-4 p-5 lg:p-6'>
+                  {/* Label */}
+                  <div className='flex items-start pt-1'>
+                    <span className='text-xs font-bold tracking-widest uppercase text-gray-500 dark:text-gray-500'>
+                      {item.label}
+                    </span>
+                  </div>
 
-                {/* After State */}
-                <div className='space-y-3'>
-                  <span className='text-xs font-semibold text-green-600 dark:text-green-400 uppercase tracking-wide block'>
-                    After
-                  </span>
-                  <div className='space-y-2'>
-                    <h3 className='text-lg lg:text-xl font-semibold text-gray-900 dark:text-white'>
-                      {item.after}
-                    </h3>
-                    <p className='text-sm text-gray-600 dark:text-gray-400 italic'>
-                      &quot;{item.afterDetail}&quot;
-                    </p>
+                  {/* Before State */}
+                  <div className='space-y-3'>
+                    <span className='text-xs font-semibold text-red-600 dark:text-red-400 uppercase tracking-wide block'>
+                      Before
+                    </span>
+                    <div className='space-y-2'>
+                      <h3 className='text-lg lg:text-xl font-semibold text-gray-900 dark:text-white'>
+                        {item.before}
+                      </h3>
+                      <p className='text-sm text-gray-600 dark:text-gray-400 italic'>
+                        &quot;{item.beforeDetail}&quot;
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Simple Arrow */}
+                  <div className='flex justify-center items-center'>
+                    <motion.div
+                      animate={hoveredIndex === index ? { x: [0, 8, 0] } : { x: 0 }}
+                      transition={{ duration: 1, repeat: hoveredIndex === index ? Infinity : 0 }}
+                      className='w-10 h-10 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center text-white shadow-lg'
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </motion.div>
+                  </div>
+
+                  {/* After State */}
+                  <div className='space-y-3'>
+                    <span className='text-xs font-semibold text-green-600 dark:text-green-400 uppercase tracking-wide block'>
+                      After
+                    </span>
+                    <div className='space-y-2'>
+                      <h3 className='text-lg lg:text-xl font-semibold text-gray-900 dark:text-white'>
+                        {item.after}
+                      </h3>
+                      <p className='text-sm text-gray-600 dark:text-gray-400 italic'>
+                        &quot;{item.afterDetail}&quot;
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+              </motion.div>
+            ))}
+          </div>
 
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ delay: 1.5, duration: 0.6 }}
-          className='flex justify-center mt-8'
-        >
-          <Link 
-            href="/how-it-works"
-            className='group bg-primary text-white font-medium flex flex-row justify-between items-center py-2 px-5 rounded-full max-w-64 w-full md:py-3 border border-primary transition-all duration-200 ease-in-out hover:bg-transparent hover:text-primary'
+          {/* CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ delay: 1.5, duration: 0.6 }}
+            className='flex justify-center'
           >
-            <span className='flex text-start transform transition-transform duration-200 ease-in-out group-hover:translate-x-4'>
-              See How It Works
-            </span>
-            <svg
-              width='40'
-              height='40'
-              viewBox='0 0 40 40'
-              fill='none'
-              xmlns='http://www.w3.org/2000/svg'
-              className='transform transition-transform duration-200 ease-in-out group-hover:-translate-x-2 group-hover:rotate-45'>
-              <rect
+            <Link 
+              href="/how-it-works"
+              className='group bg-primary text-white font-medium flex flex-row justify-between items-center py-2.5 px-4 md:py-3 md:px-5 rounded-full max-w-64 w-full border border-primary transition-all duration-200 ease-in-out hover:bg-transparent hover:text-primary'
+            >
+              <span className='flex text-sm md:text-base text-start transform transition-transform duration-200 ease-in-out group-hover:translate-x-4'>
+                See How It Works
+              </span>
+              <svg
                 width='40'
                 height='40'
-                rx='20'
-                className='fill-white transition-colors duration-200 ease-in-out group-hover:fill-primary'
-              />
-              <path
-                d='M15.832 15.3334H24.1654V23.6667'
-                className='stroke-[#1B1D1E] transition-colors duration-200 ease-in-out group-hover:stroke-white'
-                strokeWidth='1.66667'
-                strokeLinecap='round'
-                strokeLinejoin='round'
-              />
-              <path
-                d='M15.832 23.6667L24.1654 15.3334'
-                className='stroke-[#1B1D1E] transition-colors duration-500 ease-in-out group-hover:stroke-white'
-                strokeWidth='1.66667'
-                strokeLinecap='round'
-                strokeLinejoin='round'
-              />
-            </svg>
-          </Link>
-        </motion.div>
+                viewBox='0 0 40 40'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'
+                className='transform transition-transform duration-200 ease-in-out group-hover:-translate-x-2 group-hover:rotate-45'>
+                <rect
+                  width='40'
+                  height='40'
+                  rx='20'
+                  className='fill-white transition-colors duration-200 ease-in-out group-hover:fill-primary'
+                />
+                <path
+                  d='M15.832 15.3334H24.1654V23.6667'
+                  className='stroke-[#1B1D1E] transition-colors duration-200 ease-in-out group-hover:stroke-white'
+                  strokeWidth='1.66667'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                />
+                <path
+                  d='M15.832 23.6667L24.1654 15.3334'
+                  className='stroke-[#1B1D1E] transition-colors duration-500 ease-in-out group-hover:stroke-white'
+                  strokeWidth='1.66667'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                />
+              </svg>
+            </Link>
+          </motion.div>
+        </div>
       </div>
     </section>
   )
