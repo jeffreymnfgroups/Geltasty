@@ -17,12 +17,27 @@ function GestaltyDifference() {
           <polyline points="12,6 12,12 16,14"/>
         </svg>
       ),
-      before: "Random study hours",
-      after: "Data-driven stages",
-      beforeDetail: "I feel lost...",
+      before: "Random study hours with no clarity or control",
+      after: "Data-driven stages convert feelings into facts, defining measurable goals and milestones",
+      beforeDetail: "I feel lost…",
       afterDetail: "I know exactly where I am",
       borderColor: "border-l-red-500",
       gradient: "from-red-50 to-red-100 dark:from-red-900/20 dark:to-red-800/20"
+    },
+    {
+      label: "STRATEGY",
+      icon: (
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+        </svg>
+      ),
+      before: "Trial and error approaches dominate",
+      after: "Predictive intelligence intervenes early, providing evidence-based paths for maximum efficiency",
+      beforeDetail: "Wasting time guessing",
+      afterDetail: "Science-backed strategies",
+      borderColor: "border-l-indigo-500",
+      gradient: "from-indigo-50 to-indigo-100 dark:from-indigo-900/20 dark:to-indigo-800/20"
     },
     {
       label: "PROGRESS",
@@ -32,12 +47,27 @@ function GestaltyDifference() {
           <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
         </svg>
       ),
-      before: "Subjective progress",
-      after: "Real-time metrics",
+      before: "Relying on subjective feelings of effort",
+      after: "Real-time analytics and blended scientific models show actual learning progress objectively",
       beforeDetail: "Am I doing enough?",
       afterDetail: "I have completed Stage 3",
       borderColor: "border-l-orange-500",
       gradient: "from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20"
+    },
+    {
+      label: "PERSONALISATION",
+      icon: (
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"/>
+        </svg>
+      ),
+      before: "One-size-fits-all structure",
+      after: "Adaptive systems tailor schedules and focus areas, connecting cognitive patterns with optimal study flow",
+      beforeDetail: "Everyone studies the same way",
+      afterDetail: "Built for me",
+      borderColor: "border-l-yellow-500",
+      gradient: "from-yellow-50 to-yellow-100 dark:from-yellow-900/20 dark:to-yellow-800/20"
     },
     {
       label: "SUPPORT",
@@ -49,42 +79,12 @@ function GestaltyDifference() {
           <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
         </svg>
       ),
-      before: "Limited help",
-      after: "24/7 support",
+      before: "Limited help and inconsistent communication",
+      after: "A transparent ecosystem connects students, mentors, and parents with continuous visibility and timely guidance",
       beforeDetail: "I am stuck",
       afterDetail: "Mentor feedback received",
       borderColor: "border-l-pink-500",
       gradient: "from-pink-50 to-pink-100 dark:from-pink-900/20 dark:to-pink-800/20"
-    },
-    {
-      label: "PERSONALIZATION",
-      icon: (
-        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <circle cx="12" cy="12" r="3"/>
-          <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"/>
-        </svg>
-      ),
-      before: "One-size-fits-all",
-      after: "Personalized profile",
-      beforeDetail: "This does not work for me",
-      afterDetail: "Perfect for my learning style",
-      borderColor: "border-l-yellow-500",
-      gradient: "from-yellow-50 to-yellow-100 dark:from-yellow-900/20 dark:to-yellow-800/20"
-    },
-    {
-      label: "STRATEGY",
-      icon: (
-        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <circle cx="12" cy="12" r="3"/>
-          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-        </svg>
-      ),
-      before: "Trial & error",
-      after: "Evidence-based",
-      beforeDetail: "Wasting time guessing",
-      afterDetail: "Science-backed strategies",
-      borderColor: "border-l-indigo-500",
-      gradient: "from-indigo-50 to-indigo-100 dark:from-indigo-900/20 dark:to-indigo-800/20"
     }
   ]
 
@@ -96,21 +96,22 @@ function GestaltyDifference() {
           ref={ref}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className='text-center mb-20'
+          className='text-center mb-16 md:mb-24'
         >
           <motion.h2 
-            className='text-4xl md:text-5xl lg:text-6xl font-medium mb-8 leading-tight brockmann-font'
+            className='text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 brockmann-font text-dark_black dark:text-white'
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6 }}
           >
             The Gestalty Difference From
             <br />
-            <span className='instrument-font italic font-normal dark:text-white/70'>
-             Guesswork to Precision            </span>
+            <span className='instrument-font italic font-normal text-primary dark:text-gold-light'>
+             Guesswork to Precision
+            </span>
           </motion.h2>
           <motion.p 
-            className='text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed'
+            className='text-lg md:text-xl lg:text-2xl text-gray-700 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed font-light tracking-wide'
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -133,31 +134,31 @@ function GestaltyDifference() {
                 hoveredIndex === index ? 'shadow-xl scale-[1.02]' : 'shadow-sm hover:shadow-lg'
               }`}
             >
-              <div className='grid md:grid-cols-[120px_1fr_60px_1fr] items-center gap-4 p-5 lg:p-6'>
+              <div className='grid md:grid-cols-[120px_1fr_60px_1fr] gap-4 p-5 lg:p-6'>
                 {/* Label */}
-                <div className='hidden md:block'>
+                <div className='hidden md:flex items-start pt-1'>
                   <span className='text-xs font-bold tracking-widest uppercase text-gray-500 dark:text-gray-500'>
                     {item.label}
                   </span>
                 </div>
 
                 {/* Before State */}
-                <div className='space-y-2'>
-                  <div className='flex items-baseline gap-3'>
-                    <span className='text-xs font-semibold text-red-600 dark:text-red-400 uppercase tracking-wide'>
-                      Before
-                    </span>
+                <div className='space-y-3'>
+                  <span className='text-xs font-semibold text-red-600 dark:text-red-400 uppercase tracking-wide block'>
+                    Before
+                  </span>
+                  <div className='space-y-2'>
                     <h3 className='text-lg lg:text-xl font-semibold text-gray-900 dark:text-white'>
                       {item.before}
                     </h3>
+                    <p className='text-sm text-gray-600 dark:text-gray-400 italic'>
+                      &quot;{item.beforeDetail}&quot;
+                    </p>
                   </div>
-                  <p className='text-sm text-gray-600 dark:text-gray-400 italic'>
-                    &quot;{item.beforeDetail}&quot;
-                  </p>
                 </div>
 
                 {/* Simple Arrow */}
-                <div className='flex justify-center'>
+                <div className='flex justify-center items-center'>
                   <motion.div
                     animate={hoveredIndex === index ? { x: [0, 8, 0] } : { x: 0 }}
                     transition={{ duration: 1, repeat: hoveredIndex === index ? Infinity : 0 }}
@@ -170,18 +171,18 @@ function GestaltyDifference() {
                 </div>
 
                 {/* After State */}
-                <div className='space-y-2'>
-                  <div className='flex items-baseline gap-3'>
-                    <span className='text-xs font-semibold text-green-600 dark:text-green-400 uppercase tracking-wide'>
-                      After
-                    </span>
+                <div className='space-y-3'>
+                  <span className='text-xs font-semibold text-green-600 dark:text-green-400 uppercase tracking-wide block'>
+                    After
+                  </span>
+                  <div className='space-y-2'>
                     <h3 className='text-lg lg:text-xl font-semibold text-gray-900 dark:text-white'>
                       {item.after}
                     </h3>
+                    <p className='text-sm text-gray-600 dark:text-gray-400 italic'>
+                      &quot;{item.afterDetail}&quot;
+                    </p>
                   </div>
-                  <p className='text-sm text-gray-600 dark:text-gray-400 italic'>
-                    &quot;{item.afterDetail}&quot;
-                  </p>
                 </div>
               </div>
             </motion.div>

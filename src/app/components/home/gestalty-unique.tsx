@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import Link from "next/link";
+import { CTAButton } from "@/app/components/shared/cta-button";
 import {
   TrendingUp,
   Beaker,
@@ -98,43 +98,14 @@ export function GestaltyUnique() {
 
         {/* CTA Button */}
         <div className="w-full py-8 flex justify-center">
-          <Link
+          <CTAButton
             href="/contact"
-            className="group bg-primary text-white font-medium flex flex-row justify-between items-center py-2 px-4 rounded-full md:max-w-64 w-full sm:w-auto border border-primary transition-all duration-200 ease-in-out hover:bg-transparent hover:text-primary dark:hover:text-primary"
+            className="w-full sm:w-auto md:max-w-64"
+            labelClassName="text-center"
+            arrowSize={40}
           >
-            <span className="flex-1 text-center transform transition-transform duration-200 ease-in-out group-hover:scale-95">
-              Learn More
-            </span>
-            <svg
-              width="40"
-              height="40"
-              viewBox="0 0 40 40"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="flex-shrink-0 transform transition-transform duration-200 ease-in-out group-hover:scale-90 group-hover:rotate-45"
-            >
-              <rect
-                width="40"
-                height="40"
-                rx="20"
-                className="fill-white transition-colors duration-200 ease-in-out group-hover:fill-primary"
-              />
-              <path
-                d="M15.832 15.3334H24.1654V23.6667"
-                className="stroke-[#1B1D1E] transition-colors duration-200 ease-in-out group-hover:stroke-white"
-                strokeWidth="1.66667"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M15.832 23.6667L24.1654 15.3334"
-                className="stroke-[#1B1D1E] transition-colors duration-200 ease-in-out group-hover:stroke-white"
-                strokeWidth="1.66667"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </Link>
+            Learn More
+          </CTAButton>
         </div>
       </div>
     </section>

@@ -2,6 +2,17 @@ import { Metadata } from "next";
 import Link from "next/link";
 export const metadata: Metadata = {
     title: "Privacy Policy | Gestalty",
+    description: "Gestalty Privacy Policy - Learn how we collect, use, and protect personal information for NEET & UPSC aspirants, parents, and mentors on our learning platform.",
+    keywords: [
+        "Gestalty privacy policy",
+        "data protection",
+        "privacy policy NEET UPSC",
+        "learning platform privacy"
+    ],
+    robots: {
+        index: true,
+        follow: true,
+    },
 };
 
 export default function Page() {

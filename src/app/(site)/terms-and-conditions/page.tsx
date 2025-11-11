@@ -1,6 +1,17 @@
 import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Terms & Conditions | Gestalty",
+    description: "Gestalty Terms and Conditions - Read our terms of service for using the NEET & UPSC exam preparation platform, mentorship services, and learning analytics tools.",
+    keywords: [
+        "Gestalty terms and conditions",
+        "terms of service",
+        "NEET UPSC platform terms",
+        "learning platform terms"
+    ],
+    robots: {
+        index: true,
+        follow: true,
+    },
 };
 
 export default function Page() {

@@ -1,5 +1,4 @@
 'use client'
-import Link from 'next/link'
 import { useEffect, useState, useCallback } from 'react'
 import { usePathname } from 'next/navigation'
 import HeaderLink from './Navigation/HeaderLink'
@@ -7,6 +6,7 @@ import { headerData } from './Navigation/Menudata'
 import Logo from './Logo'
 import MobileHeader from './Navigation/MobileHeader'
 import ThemeToggler from './ThemeToggle'
+import { CTAButton } from '@/app/components/shared/cta-button'
 
 const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -52,11 +52,14 @@ const Header = () => {
             </div>
             <div className='flex items-center gap-1 xl:gap-4'>
               <div className='flex items-center gap-2'>
-                <Link
-                  href={'/contact'}
-                  className='hidden lg:block text-white px-2.5 xl:px-4 py-2 bg-primary hover:bg-primary/90 rounded-full transition-all duration-200 ease-in-out transform hover:scale-105 shadow-lg'>
-                  Contact
-                </Link>
+                <CTAButton
+                  href='/contact'
+                  className='hidden lg:inline-flex px-4 py-2 text-sm shadow-lg'
+                  labelClassName='text-sm'
+                  arrowSize={28}
+                >
+                  Get Started
+                </CTAButton>
               </div>
 
               {/* ---------------------Light/Dark Mode button-------------------- */}
@@ -122,11 +125,14 @@ const Header = () => {
                 <MobileHeader key={index} item={item} />
               ))}
               <div className='flex flex-col items-center gap-3 px-2 mt-2'>
-                <Link
-                  href={'/contact'}
-                  className='w-full text-white px-4 py-2 bg-primary hover:bg-primary/90 rounded-md transition-all duration-200 ease-in-out transform hover:scale-105 shadow-lg'>
-                  Contact
-                </Link>
+                <CTAButton
+                  href='/contact'
+                  className='w-full justify-center px-4 py-2 text-base shadow-lg'
+                  labelClassName='text-center'
+                  arrowSize={28}
+                >
+                  Get Started
+                </CTAButton>
               </div>
             </ul>
           </div>

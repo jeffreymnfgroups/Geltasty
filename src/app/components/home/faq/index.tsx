@@ -11,10 +11,10 @@ function Faq() {
       <div className='2xl:py-20 py-11'>
         <div className='container'>
           <div className='flex flex-col gap-10 md:gap-20'>
-            <div className='max-w-md text-center mx-auto'>
-              <h2 className='brockmann-font'>
+            <div className='max-w-2xl text-center mx-auto'>
+              <h2 className='text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight brockmann-font'>
                 Got questions? We've got{' '}
-                <span className='instrument-font italic font-normal dark:text-white/70'>
+                <span className='instrument-font italic font-normal text-primary dark:text-white/70'>
                   answers
                 </span>
               </h2>

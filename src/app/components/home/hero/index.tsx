@@ -1,11 +1,11 @@
 'use client'
 import Image from 'next/image'
-import Link from 'next/link'
 import React, { useRef } from 'react'
 import { motion } from 'framer-motion'
 import StarRating from '../../shared/star-rating'
 import { usePageData } from '@/hooks/use-page-data'
 import type { avatar } from '@/app/types/menu'
+import { CTAButton } from '@/app/components/shared/cta-button'
 
 function HeroSection() {
   const ref = useRef(null)
@@ -27,98 +27,43 @@ function HeroSection() {
             <motion.div
               {...bottomAnimation}
               className='relative flex flex-col text-center items-center gap-4'>
-              <h1 className='text-4xl md:text-5xl lg:text-6xl font-medium w-full leading-tight brockmann-font'>
-                Transform Your Competitive Exam Journey
-                <br />
-                <span className='instrument-font italic font-normal dark:text-white/70'>
-                  with science-driven learning
+              <h1 className='text-4xl md:text-5xl lg:text-6xl font-semibold w-full leading-tight brockmann-font'>
+                A Platform That Thinks{' '}
+                <span className="instrument-font italic font-normal">
+                  With You
                 </span>
               </h1>
-              <p className='max-w-38 text-dark_black/60 dark:text-white/60'>
-                Science-driven learning platform revolutionizing NEET and UPSC preparation 
-                through cognitive analytics and expert mentorship.
+              <p className='text-xl md:text-2xl text-dark_black/80 dark:text-white/80 font-medium'>
+                Scientifically, Strategically, Psychologically — and Statistically.
               </p>
+              <p className='max-w-3xl text-lg text-dark_black/60 dark:text-white/60'>
+              Gestalty rely on blends of cognitive psychology, statistical analysis, and proven pedagogy to create a preparation system that respects how your mind actually learns.              </p>
             </motion.div>
 
             <motion.div
               {...bottomAnimation}
               className='flex flex-col items-center justify-center gap-4'>
               <div className='flex flex-col items-center justify-center gap-4 w-full sm:flex-row sm:gap-8'>
-                {/* ----------- Get started Link -------------- */}
-                <Link
+                <CTAButton
                   href='/contact'
-                  className='group bg-primary text-white font-medium flex flex-row justify-between items-center py-2 px-5 rounded-full max-w-64 w-full md:py-3 border border-primary transition-all duration-200 ease-in-out hover:bg-transparent hover:text-primary'>
-                  <span className='flex text-start transform transition-transform duration-200 ease-in-out group-hover:translate-x-16'>
-                    Get Started Free
-                  </span>
-                  <svg
-                    width='40'
-                    height='40'
-                    viewBox='0 0 40 40'
-                    fill='none'
-                    xmlns='http://www.w3.org/2000/svg'
-                    className='transform transition-transform duration-200 ease-in-out group-hover:-translate-x-44 group-hover:rotate-45'>
-                    <rect
-                      width='40'
-                      height='40'
-                      rx='20'
-                      className='fill-white transition-colors duration-200 ease-in-out group-hover:fill-primary'
-                    />
-                    <path
-                      d='M15.832 15.3334H24.1654V23.6667'
-                      className='stroke-[#1B1D1E] transition-colors duration-200 ease-in-out group-hover:stroke-white'
-                      strokeWidth='1.66667'
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                    />
-                    <path
-                      d='M15.832 23.6667L24.1654 15.3334'
-                      className='stroke-[#1B1D1E] transition-colors duration-500 ease-in-out group-hover:stroke-white'
-                      strokeWidth='1.66667'
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                    />
-                  </svg>
-                </Link>
+                  className='w-full max-w-64 md:py-3'
+                  labelClassName='text-start'
+                  arrowSize={40}
+                >
+                  Get Started
+                </CTAButton>
 
-                {/* ----------- Schedule Demo Link -------------- */}
-                <Link
+                <CTAButton
                   href='https://calendly.com/dimentussolutions/30min'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='group bg-transparent text-primary font-medium flex flex-row justify-between items-center py-2 px-5 rounded-full max-w-64 w-full md:py-3 border border-primary transition-all duration-200 ease-in-out hover:bg-primary hover:text-white'>
-                  <span className='flex text-start transform transition-transform duration-200 ease-in-out group-hover:translate-x-16'>
-                    Schedule Demo
-                  </span>
-                  <svg
-                    width='40'
-                    height='40'
-                    viewBox='0 0 40 40'
-                    fill='none'
-                    xmlns='http://www.w3.org/2000/svg'
-                    className='transform transition-transform duration-200 ease-in-out group-hover:-translate-x-44 group-hover:rotate-45'>
-                    <rect
-                      width='40'
-                      height='40'
-                      rx='20'
-                      className='fill-primary transition-colors duration-200 ease-in-out group-hover:fill-white'
-                    />
-                    <path
-                      d='M15.832 15.3334H24.1654V23.6667'
-                      className='stroke-white transition-colors duration-200 ease-in-out group-hover:stroke-primary'
-                      strokeWidth='1.66667'
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                    />
-                    <path
-                      d='M15.832 23.6667L24.1654 15.3334'
-                      className='stroke-white transition-colors duration-500 ease-in-out group-hover:stroke-primary'
-                      strokeWidth='1.66667'
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                    />
-                  </svg>
-                </Link>
+                  variant='secondary'
+                  className='w-full max-w-64 md:py-3'
+                  labelClassName='text-start'
+                  arrowSize={40}
+                >
+                  View Demo
+                </CTAButton>
 
                 {/* --------------- avatar division -------------- */}
                 <div className='flex items-center gap-7'>
@@ -153,7 +98,7 @@ function HeroSection() {
             {/* Dashboard Image */}
             <motion.div
               {...bottomAnimation}
-              className='flex justify-center mt-8'>
+              className='flex flex-col items-center justify-center mt-8'>
               <Image
                 src='/images/home/dashboard.png'
                 alt='Dashboard Preview'
@@ -162,6 +107,9 @@ function HeroSection() {
                 className='rounded-lg '
                 priority
               />
+              <p className='mt-1 text-sm text-dark_black/60 dark:text-white/60 text-center'>
+                Dashboard visual
+              </p>
             </motion.div>
 
           </div>

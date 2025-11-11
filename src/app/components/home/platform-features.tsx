@@ -1,17 +1,18 @@
 'use client'
 
+import { FadeIn } from "@/app/components/shared/fade-in";
+import { CTAButton } from "@/app/components/shared/cta-button";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 import {
   BarChart3,
-  Brain,
-  Users,
+  Handshake,
   Map,
   Lightbulb,
   Layout,
-  Users2,
+  Puzzle,
   Target,
   RotateCw,
+  UserCheck,
   Zap,
 } from "lucide-react";
 
@@ -34,15 +35,15 @@ const features: Feature[] = [
     number: 2,
     title: "Quantified Learning Quality",
     description:
-      "Measure depth of understanding, application ability, and retention strength—not just time spent.",
+      "Effort Quality Index measures depth of understanding, application ability, and retention strength—not just time spent.",
     icon: <Zap className="w-8 h-8" />,
   },
   {
     number: 3,
     title: "Mentor Community",
     description:
-      "1:1 strategic sessions, customized study plans, answer-writing evaluation, and mock interview prep.",
-    icon: <Users className="w-8 h-8" />,
+      "1:1 strategic sessions with progress sync, customized study plans, answer-writing evaluation, and mock interview prep.",
+    icon: <Handshake className="w-8 h-8" />,
   },
   {
     number: 4,
@@ -53,10 +54,10 @@ const features: Feature[] = [
   },
   {
     number: 5,
-    title: "Metacognitive Tools",
+    title: "Metacognitive Skill Tools",
     description:
       "Develop planning, self-monitoring, and reflection skills—learn how to learn more effectively.",
-    icon: <Brain className="w-8 h-8" />,
+    icon: <Puzzle className="w-8 h-8" />,
   },
   {
     number: 6,
@@ -69,52 +70,51 @@ const features: Feature[] = [
     number: 7,
     title: "Accountability Partnerships",
     description:
-      "Peer-matching system with regular check-ins and momentum tracking to maintain consistency.",
-    icon: <Users2 className="w-8 h-8" />,
+      "Peer-matching system with regular check-ins and peer momentum sync to maintain consistency.",
+    icon: <UserCheck className="w-8 h-8" />,
   },
   {
     number: 8,
-    title: "SMART Goal Framework",
+    title: "SMART Goal Planning Framework",
     description:
       "Structure your preparation with Specific, Measurable, Achievable, Relevant, Time-bound objectives.",
     icon: <Target className="w-8 h-8" />,
   },
   {
     number: 9,
-    title: "Retention & Revision System",
+    title: "Revision & Retention Engine",
     description:
-      "AI-powered reminders based on spaced repetition and cognitive forgetting curves to maximize retention.",
+      "Spaced repetition system with AI-powered reminders based on cognitive forgetting curves to maximize retention.",
     icon: <RotateCw className="w-8 h-8" />,
   },
   {
     number: 10,
-    title: "Psychology Integration",
+    title: "Psychology-Integrated Feedback",
     description:
-      "Every tool backed by proven cognitive science research—not random features, but validated interventions.",
+      "Cognitive bias detection and feedback backed by proven cognitive science research—not random features, but validated interventions.",
     icon: <Lightbulb className="w-8 h-8" />,
   },
 ];
 
 export function PlatformFeatures() {
   return (
-    <section className="w-full py-16 md:py-24 bg-white dark:bg-dark_black">
-      <div className="container px-6 lg:px-8 mx-auto">
-        {/* Header */}
-        <div className="text-center mb-16 md:mb-20">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold brockmann-font mb-4 dark:text-white">
+    <section className="section-spacing bg-white dark:bg-dark_black">
+      <div className="container mx-auto px-6 lg:px-8">
+        <FadeIn as="div" className="text-center mb-16 md:mb-20">
+          <h2 className="text-display-xl brockmann-font mb-4">
             10 Science-Driven Tools for
             <br />
             <span className="instrument-font italic font-normal dark:text-white/70">
               Exam Mastery
             </span>
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-body-lg max-w-3xl mx-auto">
             From overwhelm to mastery: evidence-driven, personalized, accountable learning
           </p>
-        </div>
+        </FadeIn>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-5 mb-12">
           {features.map((feature, index) => (
             <FeatureCard
               key={feature.number}
@@ -126,43 +126,15 @@ export function PlatformFeatures() {
 
         {/* CTA Button */}
         <div className="w-full py-8 flex justify-center">
-          <Link
-            href='/contact'
-            className='group bg-primary text-white font-medium flex flex-row justify-between items-center py-2 px-6 rounded-full md:max-w-96 w-full sm:w-auto border border-primary transition-all duration-200 ease-in-out hover:bg-transparent hover:text-primary dark:hover:text-primary'
-          >
-            <span className='flex-1 text-center transform transition-transform duration-200 ease-in-out group-hover:scale-95'>
-              Explore All Features
-            </span>
-            <svg
-              width='40'
-              height='40'
-              viewBox='0 0 40 40'
-              fill='none'
-              xmlns='http://www.w3.org/2000/svg'
-              className='flex-shrink-0 ml-2 transform transition-transform duration-200 ease-in-out group-hover:scale-90 group-hover:rotate-45'
+          <FadeIn>
+            <CTAButton
+              href="/contact"
+              className="w-full max-w-xs sm:w-auto"
+              labelClassName="text-center"
             >
-              <rect
-                width='40'
-                height='40'
-                rx='20'
-                className='fill-white transition-colors duration-200 ease-in-out group-hover:fill-primary'
-              />
-              <path
-                d='M15.832 15.3334H24.1654V23.6667'
-                className='stroke-[#1B1D1E] transition-colors duration-200 ease-in-out group-hover:stroke-white'
-                strokeWidth='1.66667'
-                strokeLinecap='round'
-                strokeLinejoin='round'
-              />
-              <path
-                d='M15.832 23.6667L24.1654 15.3334'
-                className='stroke-[#1B1D1E] transition-colors duration-200 ease-in-out group-hover:stroke-white'
-                strokeWidth='1.66667'
-                strokeLinecap='round'
-                strokeLinejoin='round'
-              />
-            </svg>
-          </Link>
+              Explore All Features
+            </CTAButton>
+          </FadeIn>
         </div>
       </div>
     </section>
@@ -178,11 +150,12 @@ const FeatureCard = ({ feature, index }: FeatureCardProps) => {
   const isTopRow = index < 5;
 
   return (
-    <div
+    <FadeIn
       className={cn(
-        "group relative p-6 md:p-7 rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/50 transition-all duration-300 hover:border-primary/50 overflow-hidden",
+        "group relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:border-primary/50 dark:border-gray-800 dark:bg-gray-900/50 md:p-7",
         "hover:shadow-lg dark:hover:shadow-primary/20"
       )}
+      delay={index * 0.05}
     >
       {/* Background gradient on hover */}
       {isTopRow && (
@@ -207,18 +180,18 @@ const FeatureCard = ({ feature, index }: FeatureCardProps) => {
         </div>
 
         {/* Title */}
-        <h3 className="text-lg font-semibold mb-3 text-dark_black dark:text-white group-hover:text-primary transition-colors duration-300 pr-6">
+        <h3 className="text-title-md mb-3 pr-6 transition-colors duration-300 group-hover:text-primary">
           {feature.title}
         </h3>
 
         {/* Description */}
-        <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+        <p className="text-body-sm">
           {feature.description}
         </p>
       </div>
 
       {/* Hover indicator line */}
       {/* <div className="absolute bottom-0 left-0 w-0 h-1 bg-purple_blue group-hover:w-full transition-all duration-300" /> */}
-    </div>
+    </FadeIn>
   );
 };

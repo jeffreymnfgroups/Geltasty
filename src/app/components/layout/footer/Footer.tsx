@@ -12,11 +12,9 @@ const Footer = () => {
             {/* Column 1: Company Info */}
             <div className='flex flex-col gap-6'>
               <Logo />
-              <p className='opacity-60 text-sm'>
-                Science-Driven Learning for Competitive Exam Success
-              </p>
-              <p className='text-sm opacity-60'>
-                Transforming NEET and UPSC preparation through cognitive analytics, expert mentorship, and evidence-based learning systems.
+              <p className='opacity-60 text-sm font-semibold'>
+              Science-Driven Learning for Competitive Exam Mastry and Success
+              Transforming NEET and UPSC preparation through cognitive analytics, expert mentorship, and evidence-based learning systems
               </p>
               <div className='flex gap-4'>
                 <Link href="#" className='hover:opacity-60'>

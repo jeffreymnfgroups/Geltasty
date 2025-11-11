@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { ArrowIcon } from '@/app/components/shared/cta-button'
 
 const NotFound = () => {
   return (
@@ -32,29 +33,11 @@ const NotFound = () => {
                 <span className='group-hover:translate-x-9 group-hover:text-dark_black transform transition-transform duration-200 ease-in-out'>
                   Back to home
                 </span>
-                <svg
-                  width='32'
-                  height='32'
-                  viewBox='0 0 32 32'
-                  fill='none'
-                  xmlns='http://www.w3.org/2000/svg'
-                  className='group-hover:-translate-x-[125px] transition-all duration-200 ease-in-out group-hover:rotate-45'>
-                  <rect
-                    width='32'
-                    height='32'
-                    rx='16'
-                    fill='white'
-                    className='fill-white transition-colors duration-200 ease-in-out group-hover:fill-black'
-                  />
-                  <path
-                    d='M11.832 11.3334H20.1654M20.1654 11.3334V19.6668M20.1654 11.3334L11.832 19.6668'
-                    stroke='#1B1D1E'
-                    strokeWidth='1.42857'
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    className='stroke-[#1B1D1E] transition-colors duration-200 ease-in-out group-hover:stroke-white'
-                  />
-                </svg>
+                <ArrowIcon
+                  size={32}
+                  variant='primary'
+                  className='group-hover:-translate-x-[125px] transition-all duration-200 ease-in-out'
+                />
               </Link>
             </div>
           </div>

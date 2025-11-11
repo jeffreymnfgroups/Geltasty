@@ -2,99 +2,163 @@ import Image from 'next/image'
 
 function CustomerStories() {
   return (
-    <section>
-      <div className='2xl:py-20 py-11'>
-        <div className='container'>
-          <div className='flex flex-col justify-center gap-10 md:gap-20'>
-            <div className='mx-auto max-w-2xl flex items-center text-center'>
-              <h2 className='brockmann-font'>
-                Built on Science, Designed for Success
-                <span className='instrument-font italic font-normal dark:text-white/70'>
-                  {' '}
-                  Core Value Propositions
-                </span>
-              </h2>
-            </div>
-            <div className='mx-auto max-w-4xl text-center mb-8'>
-              <p className='text-lg text-dark_black/70 dark:text-white/70'>
-                Gestalty blends cognitive psychology, statistical analysis, and proven pedagogy to create a preparation system that respects how your mind actually learns.
-              </p>
-            </div>
-            <div className='flex flex-col gap-6'>
-              <div className='flex flex-col xl:flex xl:flex-row gap-6'>
-                <div className="p-8 gap-64 rounded-2xl flex flex-col relative bg-[url('/images/home/customerStories/customer_bg_img.webp')] object-cover bg-center h-full w-full bg-cover bg-no-repeat">
-                  <span className='text-white/60 uppercase text-sm font-medium'>
+    <section className='section-spacing bg-white dark:bg-dark_black'>
+      <div className='container'>
+        <div className='flex flex-col gap-12 md:gap-20'>
+          <div className='flex flex-col items-center gap-4 text-center'>
+            <h2 className='brockmann-font text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight text-dark_black dark:text-white'>
+              A System that Built on Science, Designed for Success{' '}
+              <span className="instrument-font italic font-normal">
+                Core Value Propositions
+              </span>
+            </h2>
+            <p className='text-xl md:text-2xl text-dark_black/80 dark:text-white/80 font-medium'>
+              From Preparation to Mastery—Science Guides Your Path
+            </p>
+            <p className='max-w-3xl text-lg text-dark_black/60 dark:text-white/60'>
+              Gestalty blends cognitive psychology, statistical analysis, and proven pedagogy to create a preparation system that respects how your mind actually learns.
+            </p>
+          </div>
+
+          <div className='flex flex-col gap-6'>
+            {/* Row 1: Full width card + Medium card */}
+            <div className='flex flex-col gap-6 xl:flex-row'>
+              {/* Pillar 1: Full width card with background image style */}
+              <article className="relative flex w-full flex-col gap-8 rounded-2xl p-8 md:p-10 lg:p-12 text-white overflow-hidden [&_*]:!text-white">
+                <div className="absolute inset-0 bg-dark_black/80 dark:bg-dark_black/90 rounded-2xl"></div>
+                <div className="relative z-10 flex flex-col gap-6">
+                  <span className='text-body-sm font-medium uppercase tracking-[0.28em] text-white/90'>
                     Pillar 1
                   </span>
-                  <div className='flex flex-col gap-6 '>
-                    <h4 className='text-white'>
-                      Cognitive Science Foundation
-                    </h4>
-                    <div className='flex flex-col gap-1'>
-                      <p className='text-white font-medium'>Brain with neural connections</p>
-                      <p className='text-white/60 text-sm font-medium'>
-                        Tracking cognitive learning with measurable metrics, powered by metacognitive strategies, and strengthened by psychological theory with statistical tools for deeper learning.
+                  <div className='flex flex-col lg:flex-row gap-6 lg:gap-8 items-start'>
+                    <div className='flex-1 flex flex-col gap-4'>
+                      <h4 className='brockmann-font text-2xl md:text-3xl lg:text-4xl font-semibold text-white'>
+                        Cognitive Analytics
+                      </h4>
+                      <p className='text-body-md text-white/90 leading-relaxed'>
+                        Advanced algorithms analyze your learning patterns to optimize study schedules. Learning is not random it's measurable, trackable, and improvable. By fusing psychology, pedagogy, and analytics, this system empowers you to understand yourself as a learner, take control of your growth, and reach the full potential of your mind.
                       </p>
                     </div>
-                  </div>
-                </div>
-                <div className='flex flex-col justify-between gap-36 xl:max-w-25 bg-pale-yellow rounded-2xl p-8'>
-                  <div>
-                    <span className='uppercase text-sm font-medium text-dark_black/60'>
-                      Pillar 2
-                    </span>
-                  </div>
-                  <div className='flex flex-col gap-1'>
-                    <h2 className='text-2xl font-medium dark:text-dark_black'>
-                      Data-Driven Insights
-                    </h2>
-                    <h4 className='dark:text-dark_black text-sm'>
-                      Analytics dashboard
-                    </h4>
-                    <p className='dark:text-dark_black/70 text-sm mt-2'>
-                      A real-time analytics dashboard with performance metrics, powered by statistical scoring to optimize study efficiency, and enriched with behavioral consistency tracking and improvement recommendations.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className='flex flex-col xl:flex xl:flex-row gap-6'>
-                <div className='flex flex-col justify-between bg-dark_black xl:max-w-25 dark:bg-white/10 rounded-2xl p-8'>
-                  <div className='flex flex-col gap-6'>
-                    <span className='text-white/60 uppercase text-sm font-medium'>
-                      Pillar 3
-                    </span>
-                    <h4 className='text-white'>
-                      Expert Mentorship
-                    </h4>
-                    <div>
+                    <div className='w-full lg:w-80 xl:w-96 flex-shrink-0'>
                       <Image
-                        src='/images/home/customerStories/creativity_img.webp'
-                        alt='Mentor and student connection'
-                        width={344}
-                        height={220}
-                        className='w-full h-52'
+                        src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80'
+                        alt='Cognitive analytics and brain learning'
+                        width={400}
+                        height={280}
+                        className='w-full h-64 lg:h-72 rounded-xl object-cover shadow-lg'
                         unoptimized={true}
                       />
                     </div>
-                    <p className='text-white/70 text-sm'>
-                      One-on-one expert guidance, personalized study plans with data-driven insights, and integrated mentor support with accountability partnerships to streamline and boost your preparation.
-                    </p>
                   </div>
                 </div>
-                <div className='flex flex-col gap-24 justify-between bg-dark_black/5 dark:bg-white/5 p-8 rounded-2xl'>
-                  <div className='flex flex-col gap-6'>
-                    <span className='text-dark_black/60 dark:text-white/60 uppercase text-sm font-medium'>
-                      Pillar 4
-                    </span>
-                    <h2 className='text-2xl lg:text-5xl'>
-                      Adaptive Learning Experience
-                    </h2>
-                    <p className='text-dark_black/70 dark:text-white/70 text-sm'>
+              </article>
+            </div>
+
+            {/* Row 2: Two medium cards */}
+            <div className='flex flex-col gap-6 xl:flex-row'>
+              {/* Pillar 2: Pale yellow card */}
+              <article className='flex flex-col gap-6 rounded-2xl bg-pale-yellow p-8 text-dark_black dark:bg-dark_yellow_gradient dark:text-white xl:flex-1'>
+                <span className='text-body-sm font-medium uppercase tracking-[0.28em] text-dark_black/60 dark:text-white/60'>
+                  Pillar 2
+                </span>
+                <h4 className='brockmann-font text-title-md font-semibold text-dark_black dark:text-white'>
+                  Adaptive Learning Experience
+                </h4>
+                <div>
+                  <Image
+                    src='https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80'
+                    alt='Personalized learning journey'
+                    width={400}
+                    height={240}
+                    className='w-full h-48 md:h-56 rounded-xl object-cover shadow-md'
+                    unoptimized={true}
+                  />
+                </div>
+                <div className='flex flex-col gap-3'>
+                  <div className='flex flex-col gap-2'>
+                    <h5 className='text-body-md font-semibold text-dark_black dark:text-white'>
+                      Personalized Journey
+                    </h5>
+                    <p className='text-body-sm text-dark_black/80 dark:text-white/80'>
                       A personalized learning journey that adapts in real-time to your strengths, weaknesses, and learning pace. Smart algorithms adjust content difficulty, suggest optimal study sequences, and highlight focus areas, ensuring efficient progress while keeping motivation high.
                     </p>
                   </div>
+                  <div className='flex flex-col gap-2'>
+                    <h5 className='text-body-md font-semibold text-dark_black dark:text-white'>
+                      Spaced Repetition
+                    </h5>
+                    <p className='text-body-sm text-dark_black/80 dark:text-white/80'>
+                      Scientifically-proven technique to enhance long-term retention and memory consolidation.
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </article>
+
+              {/* Pillar 3: Dark card */}
+              <article className='flex flex-col gap-6 rounded-2xl bg-dark_black p-8 text-white dark:bg-white/10 xl:flex-1 [&_*]:!text-white'>
+                <span className='text-body-sm font-medium uppercase tracking-[0.28em] text-white/60'>
+                  Pillar 3
+                </span>
+                <h4 className='brockmann-font text-title-md font-semibold text-white'>
+                  Data-Driven Insights
+                </h4>
+                <div>
+                  <Image
+                    src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80'
+                    alt='Analytics dashboard with metrics'
+                    width={400}
+                    height={200}
+                    className='w-full h-48 md:h-56 rounded-xl object-cover shadow-lg'
+                    unoptimized={true}
+                  />
+                </div>
+                <div className='flex flex-col gap-3'>
+                  <div className='flex flex-col gap-2'>
+                    <h5 className='text-body-md font-semibold text-white'>
+                      Analytics Dashboard
+                    </h5>
+                    <p className='text-body-sm text-white/90'>
+                      A real-time analytics dashboard with performance metrics, powered by statistical scoring to optimize study efficiency, enriched with behavioral consistency tracking and tailored improvement recommendations.
+                    </p>
+                  </div>
+                  <p className='text-body-sm text-white/90'>
+                    A learning ecosystem where progress is visible, study is scientific, and accountability is shared.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            {/* Row 3: Single card with light background */}
+            <div className='flex flex-col gap-6'>
+              {/* Pillar 4: Light background card */}
+              <article className='flex flex-col md:flex-row gap-6 rounded-2xl bg-dark_black/5 p-8 dark:bg-white/5'>
+                <div className='flex-1 flex flex-col gap-6'>
+                  <span className='text-body-sm font-medium uppercase tracking-[0.28em] text-dark_black/60 dark:text-white/60'>
+                    Pillar 4
+                  </span>
+                  <h4 className='brockmann-font text-title-md font-semibold text-dark_black dark:text-white'>
+                    Expert Mentorship
+                  </h4>
+                  <div className='flex flex-col gap-3'>
+                    <h5 className='text-body-md font-semibold text-dark_black dark:text-white'>
+                      Mentor Connection
+                    </h5>
+                    <p className='text-body-md text-dark_black/80 dark:text-white/80 leading-relaxed'>
+                      One-on-one expert guidance, personalized study plans with data-driven insights, and integrated mentor support with accountability partnerships streamline and boost your preparation.
+                    </p>
+                  </div>
+                </div>
+                <div className='w-full md:w-96 flex-shrink-0'>
+                  <Image
+                    src='https://images.unsplash.com/photo-1522071901873-411886a10004?w=800&q=80'
+                    alt='Mentor connection and guidance'
+                    width={400}
+                    height={280}
+                    className='w-full h-64 md:h-full rounded-xl object-cover shadow-md'
+                    unoptimized={true}
+                  />
+                </div>
+              </article>
             </div>
           </div>
         </div>

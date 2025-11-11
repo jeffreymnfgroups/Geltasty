@@ -10,51 +10,141 @@ import HeroSection from "./components/home/hero";
 // import Innovation from "./components/home/innovation";
 // import OnlinePresence from "./components/home/online-presence";
 import Solutions from "./components/home/solution";
+import Pricing from "./components/home/pricing";
 // import Subscription from "./components/home/subscription";
 import WebResult from "./components/home/web-result";
 import GestaltyDifference from "./components/home/gestalty-difference";
-import { PlatformFeatures } from "./components/home/platform-features";
+// import { PlatformFeatures } from "./components/home/platform-features";
+// import { GestaltyUnique } from "./components/home/gestalty-unique";
+import ProblemImpactSolution from "./components/home/problem-impact-solution";
 import { GestaltyUnique } from "./components/home/gestalty-unique";
+import LaunchTransformation from "./components/home/launch-transformation";
 
 export const metadata: Metadata = {
     title: "Home | Gestalty",
+    description: "Master NEET & UPSC exams with Gestalty - A precision engineered learning platform for competitive exam mastery. Science-driven study tools, expert mentorship, and cognitive analytics for aspirants, parents, and mentors.",
+    keywords: [
+        "NEET preparation",
+        "UPSC preparation",
+        "competitive exam coaching",
+        "NEET online coaching",
+        "UPSC online coaching",
+        "exam preparation platform",
+        "NEET aspirants",
+        "UPSC aspirants",
+        "competitive exam mastery",
+        "learning platform",
+        "exam coaching",
+        "NEET mentors",
+        "UPSC mentors",
+        "cognitive learning",
+        "personalized study plans",
+        "exam success"
+    ],
+    openGraph: {
+        title: "Home | Gestalty - A Precision Engineered Learning Platform for Competitive Exam Mastery",
+        description: "Master NEET & UPSC exams with Gestalty's science-driven learning platform. Personalized mentorship, cognitive analytics, and precision-engineered study tools.",
+        type: "website",
+        locale: "en_IN",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Home | Gestalty - A Precision Engineered Learning Platform for Competitive Exam Mastery",
+        description: "Master NEET & UPSC exams with Gestalty's science-driven learning platform. Personalized mentorship, cognitive analytics, and precision-engineered study tools.",
+    },
 };
 
 export default function Home() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Gestalty",
+    "description": "A Precision Engineered Learning Platform for Competitive Exam Mastery",
+    "url": "https://gestalty.org",
+    "logo": "https://gestalty.org/images/logo/logo.svg",
+    "sameAs": [
+      "https://twitter.com/geltasty",
+      "https://linkedin.com/company/geltasty",
+      "https://instagram.com/geltasty"
+    ],
+    "educationalCredentialAwarded": "Competitive Exam Preparation",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "NEET & UPSC Exam Preparation Courses",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Course",
+            "name": "NEET Preparation Program",
+            "description": "Comprehensive NEET exam preparation with personalized mentorship and cognitive analytics"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Course",
+            "name": "UPSC Preparation Program",
+            "description": "Complete UPSC exam preparation with expert guidance and science-driven study tools"
+          }
+        }
+      ]
+    },
+    "audience": {
+      "@type": "EducationalAudience",
+      "educationalRole": ["student", "aspirant", "parent", "mentor"]
+    }
+  };
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* ---------------------Hero section Starts-----------------  */}
       <HeroSection />
       {/* ---------------------Hero section Ends-----------------  */}
+
+      {/* ---------------------About Us / Customer Stories section Starts-----------------  */}
+      <CustomerStories />
+      {/* ---------------------About Us / Customer Stories section Ends-----------------  */}
       <KeyBenefits />
 
-      {/* ---------------------Brand logo section Starts-----------------  */}
+
+      {/* ---------------------Platform section Starts-----------------  */}
       <Brand />
-      {/* ---------------------Brand logo section Ends-----------------  */}
-
-      {/* ---------------------Web result section Starts-----------------  */}
+      {/* ---------------------Platform section Ends-----------------  */}
       <WebResult />
-      {/* ---------------------Web result section Ends-----------------  */}
 
-      {/* ---------------------Gestalty Difference section Starts-----------------  */}
+      <ProblemImpactSolution />
+
       <GestaltyDifference />
-      {/* ---------------------Gestalty Difference section Ends-----------------  */}
 
-      {/* ---------------------Customer Stories section Starts-----------------  */}
-      <CustomerStories />
-      {/* ---------------------Customer Stories section Ends-----------------  */}
+
+      {/* ---------------------Feature Overview section Starts-----------------  */}
+      {/* <PlatformFeatures /> */}
+      {/* ---------------------Feature Overview section Ends-----------------  */}
+
+      {/* ---------------------Core Value Proposition section Starts-----------------  */}
+      {/* ---------------------Core Value Proposition section Ends-----------------  */}
+
+      {/* ---------------------Problem Grid section Starts-----------------  */}
+      {/* ---------------------Problem Grid section Ends-----------------  */}
+
+      {/* ---------------------Problem → Impact → Solution section Starts-----------------  */}
+      {/* ---------------------Problem → Impact → Solution section Ends-----------------  */}
+
+      {/* ---------------------Solution Ecosystem section Starts-----------------  */}
+      {/* ---------------------Solution Ecosystem section Ends-----------------  */}
+
+      {/* ---------------------Mentor & Support section Starts-----------------  */}
+      <GestaltyUnique />
+      {/* ---------------------Mentor & Support section Ends-----------------  */}
 
       {/* ---------------------How It Works section Starts-----------------  */}
       <HowItWorks />
       {/* ---------------------How It Works section Ends-----------------  */}
-
-      {/* ---------------------Platform Features section Starts-----------------  */}
-      <PlatformFeatures />
-      {/* ---------------------Platform Features section Ends-----------------  */}
-
-      {/* ---------------------Gestalty Unique section Starts-----------------  */}
-      <GestaltyUnique />
-      {/* ---------------------Gestalty Unique section Ends-----------------  */}
 
       {/* ---------------------Innovation section Starts-----------------  */}
       {/* <Innovation /> */}
@@ -83,6 +173,14 @@ export default function Home() {
       {/* ---------------------Solutions section Starts-----------------  */}
       <Solutions />
       {/* ---------------------Solutions section Ends-----------------  */}
+
+      {/* ---------------------Launch Transformation section Starts-----------------  */}
+      <LaunchTransformation />
+      {/* ---------------------Launch Transformation section Ends-----------------  */}
+
+      {/* ---------------------Pricing section Starts-----------------  */}
+      <Pricing />
+      {/* ---------------------Pricing section Ends-----------------  */}
     </main>
   )
 }

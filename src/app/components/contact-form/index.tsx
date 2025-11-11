@@ -2,6 +2,7 @@
 import { Icon } from '@iconify/react/dist/iconify.js'
 import Link from 'next/link'
 import { useState } from 'react'
+import { ArrowIcon } from '@/app/components/shared/cta-button'
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -75,10 +76,9 @@ function ContactForm() {
         <div className='container relative z-10'>
           <div className='flex flex-col gap-10 md:gap-20'>
             <div className='relative flex flex-col text-center items-center'>
-              <h2 className='font-medium w-full max-w-32'>
-                Ready to Transform Your Exam Journey? Get in
-                <span className='instrument-font italic font-normal dark:text-white/70'>
-                  {' '}
+              <h2 className='text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight brockmann-font'>
+                Ready to Transform Your Exam Journey? Get in{' '}
+                <span className='instrument-font italic font-normal text-primary dark:text-white/70'>
                   touch
                 </span>
               </h2>
@@ -193,42 +193,23 @@ function ContactForm() {
                   {!loader ? (
                     <button
                       type='submit'
-                      className='group w-fit text-white dark:text-dark_black font-medium bg-dark_black dark:bg-white rounded-full flex items-center gap-4 py-2 pl-5 pr-2 transition-all duration-200 ease-in-out hover:bg-[#0D1B4C] dark:hover:bg-transparent border dark:hover:text-dark_black border-dark_black'>
-                      <span className='transform transition-transform duration-200 ease-in-out group-hover:translate-x-10'>
+                      className='group inline-flex items-center justify-between gap-4 rounded-full border border-primary bg-primary px-6 py-3 font-medium text-white transition-transform duration-200 ease-out hover:scale-[1.03] hover:bg-transparent hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:hover:text-primary dark:focus-visible:ring-offset-dark_black'>
+                      <span className='flex-1 text-left transition-transform duration-200 ease-out group-hover:translate-x-1'>
                         Start Your Journey
                       </span>
-                      <svg
-                        width='32'
-                        height='32'
-                        viewBox='0 0 32 32'
-                        fill='none'
-                        xmlns='http://www.w3.org/2000/svg'
-                        className='transform transition-transform duration-200 ease-in-out group-hover:-translate-x-36 group-hover:rotate-45'>
-                        <rect
-                          width='32'
-                          height='32'
-                          rx='16'
-                          fill='white'
-                          className='fill-white dark:fill-black transition-colors duration-200 ease-in-out group-hover:fill-black '
-                        />
-                        <path
-                          d='M11.832 11.3334H20.1654M20.1654 11.3334V19.6668M20.1654 11.3334L11.832 19.6668'
-                          stroke='#1B1D1E'
-                          strokeWidth='1.42857'
-                          strokeLinecap='round'
-                          strokeLinejoin='round'
-                          className='stroke-dark_black dark:stroke-white transition-colors duration-200 ease-in-out group-hover:stroke-white'
-                        />
-                      </svg>
+                      <ArrowIcon size={32} variant='primary' />
                     </button>
                   ) : (
-                    <button className='bg-grey item-center flex gap-2 py-3 px-7 rounded-sm'>
+                    <button
+                      type='button'
+                      disabled
+                      className='inline-flex items-center gap-2 rounded-full border border-primary bg-primary px-6 py-3 font-medium text-white opacity-80'>
                       <div
-                        className='animate-spin inline-block size-6 border-[3px] border-current border-t-transparent text-blue-600 rounded-full dark:text-blue-500'
+                        className='inline-block size-5 animate-spin rounded-full border-2 border-white/80 border-t-transparent'
                         role='status'
                         aria-label='loading'>
                         <span className='sr-only'>Loading...</span>
-                      </div>{' '}
+                      </div>
                       Submitting
                     </button>
                   )}

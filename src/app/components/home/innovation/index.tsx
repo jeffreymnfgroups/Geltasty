@@ -1,9 +1,9 @@
 'use client'
 import Image from 'next/image'
-import Link from 'next/link'
 import React, { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { usePageData } from '@/hooks/use-page-data'
+import { CTAButton } from '@/app/components/shared/cta-button'
 
 function Innovation() {
   const ref = useRef(null)
@@ -17,17 +17,17 @@ function Innovation() {
     transition: { duration: 0.3, delay: 0.3 + index * 0.3 },
   })
   return (
-    <section id='services'>
-      <div ref={ref} className='2xl:py-20 py-11'>
+    <section id='services' className='section-spacing bg-white dark:bg-dark_black'>
+      <div ref={ref}>
         <div className='container'>
           <div className='flex flex-col gap-12'>
-            <div className='flex flex-col justify-center items-center gap-10 lg:gap-16'>
+            <div className='flex flex-col items-center justify-center gap-10 lg:gap-16'>
               <motion.div
                 {...bottomAnimation(1)}
                 className='max-w-(--breakpoint-Xsm) text-center'>
-                <h2 className='brockmann-font'>
+                <h2 className='brockmann-font text-display-lg text-dark_black dark:text-white'>
                   Where innovation meets{' '}
-                  <span className='instrument-font italic font-normal dark:text-white/70'>
+                  <span className='instrument-font italic font-normal text-primary dark:text-primary/80'>
                     aesthetics
                   </span>
                 </h2>
@@ -72,59 +72,22 @@ function Innovation() {
                 <br /> Start Your Creative Journey with Us!
               </h4>
               <div className='flex flex-col sm:flex-row gap-3 items-center'>
-                <Link
+                <CTAButton
                   href='/contact'
-                  className='group gap-2 text-dark_black font-medium bg-white rounded-full flex items-center lg:gap-4 py-2 pl-5 pr-2 border border-white dark:border-opacity-50 hover:bg-transparent hover:text-white transition-all duration-200 ease-in-out'>
-                  <span className='group-hover:translate-x-9 transform transition-transform duration-200 ease-in-out'>
-                    Let’s Collaborate
-                  </span>
-                  <svg
-                    width='32'
-                    height='32'
-                    viewBox='0 0 32 32'
-                    fill='none'
-                    xmlns='http://www.w3.org/2000/svg'
-                    className='group-hover:-translate-x-36 transition-all duration-200 ease-in-out'>
-                    <rect
-                      width='32'
-                      height='32'
-                      rx='16'
-                      fill='#1B1D1E'
-                      className=' transition-colors duration-200 ease-in-out group-hover:fill-white'
-                    />
-                    <path
-                      d='M11.832 11.3335H20.1654M20.1654 11.3335V19.6668M20.1654 11.3335L11.832 19.6668'
-                      stroke='white'
-                      strokeWidth='1.42857'
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                      className='group-hover:stroke-black'
-                    />
-                  </svg>
-                </Link>
-                <Link
+                  className='w-full sm:w-auto bg-white text-dark_black border-white hover:bg-transparent hover:text-white dark:border-white/50'
+                  labelClassName='text-start'
+                  variant='secondary'
+                >
+                  Let’s Collaborate
+                </CTAButton>
+                <CTAButton
                   href='/#work'
-                  className='group border border-white dark:border-white/50 text-white font-medium bg-dark_black gap-2 rounded-full flex items-center justify-between lg:gap-4 py-2 pl-5 pr-2 hover:opacity-95 hover:bg-transparent hover:text-white transition-all duration-200 ease-in-out'>
-                  <span className='group-hover:translate-x-9 transform transition-transform duration-200 ease-in-out'>
-                    View Portfolio
-                  </span>
-                  <svg
-                    width='32'
-                    height='32'
-                    viewBox='0 0 32 32'
-                    fill='none'
-                    xmlns='http://www.w3.org/2000/svg'
-                    className='group-hover:-translate-x-[125px] transition-all duration-200 ease-in-out '>
-                    <rect width='32' height='32' rx='16' fill='white' />
-                    <path
-                      d='M11.832 11.3334H20.1654M20.1654 11.3334V19.6668M20.1654 11.3334L11.832 19.6668'
-                      stroke='#1B1D1E'
-                      strokeWidth='1.42857'
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                    />
-                  </svg>
-                </Link>
+                  className='w-full sm:w-auto bg-dark_black text-white border-white hover:bg-transparent hover:text-white'
+                  labelClassName='text-start'
+                  variant='secondary'
+                >
+                  View Portfolio
+                </CTAButton>
               </div>
             </motion.div>
           </div>

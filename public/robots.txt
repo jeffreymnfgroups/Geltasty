@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://gestalty.org/sitemap.xml
+
+# Disallow admin and API routes
+Disallow: /api/
+Disallow: /_next/
+Disallow: /out/
+
+# Allow important pages
+Allow: /
+Allow: /about-us
+Allow: /features
+Allow: /pricing
+Allow: /platform
+Allow: /how-it-works
+Allow: /mentorship
+Allow: /contact
+Allow: /documentation
+

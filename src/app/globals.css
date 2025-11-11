@@ -140,6 +140,38 @@ layer(base);
     font-family: 'Brockmann Medium', serif;
   }
 
+  .text-display-xl {
+    @apply text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-dark_black dark:text-white;
+  }
+
+  .text-display-lg {
+    @apply text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-dark_black dark:text-white;
+  }
+
+  .text-title-md {
+    @apply text-2xl md:text-3xl font-semibold text-dark_black dark:text-white;
+  }
+
+  .text-body-lg {
+    @apply text-lg leading-8 text-dark_black/80 dark:text-white/85;
+  }
+
+  .text-body-md {
+    @apply text-base leading-7 text-dark_black/75 dark:text-white/75;
+  }
+
+  .text-body-sm {
+    @apply text-sm leading-6 text-dark_black/70 dark:text-white/70;
+  }
+
+  .section-spacing {
+    @apply py-16 md:py-24;
+  }
+
+  .card-surface {
+    @apply rounded-3xl border border-white/40 bg-white/80 shadow-[0_12px_40px_rgba(8,15,52,0.08)] backdrop-blur-sm dark:border-white/10 dark:bg-white/5 dark:shadow-[0_16px_50px_rgba(8,15,52,0.35)];
+  }
+
   .hero-mask {
     -webkit-mask-image: linear-gradient(
       90deg,
