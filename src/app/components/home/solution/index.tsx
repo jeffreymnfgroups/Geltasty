@@ -51,7 +51,7 @@ function Solutions() {
               </div>
 
               {/* Onboarding Checklist */}
-              <div className='w-full rounded-2xl bg-white p-6 shadow-lg dark:bg-dark_black md:p-8'>
+              {/* <div className='w-full rounded-2xl bg-white p-6 shadow-lg dark:bg-dark_black md:p-8'>
                 <h3 className='text-title-md mb-6 text-center text-dark_black dark:text-white'>
                   Get Started in Minutes
                 </h3>
@@ -97,7 +97,7 @@ function Solutions() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* CTA Buttons */}
               <div className='flex w-full flex-wrap justify-center gap-4'>
@@ -116,7 +116,7 @@ function Solutions() {
               </div>
 
               {/* Mobile App Promotion */}
-              <div className='mt-4 w-full border-t border-dark_black/10 pt-8'>
+              {/* <div className='mt-4 w-full border-t border-dark_black/10 pt-8'>
                 <div className='flex flex-col items-center gap-6'>
                   <div className='text-center'>
                     <h3 className='text-title-md mb-2 text-dark_black dark:text-white'>
@@ -127,7 +127,6 @@ function Solutions() {
                     </p>
                   </div>
                   
-                  {/* App Store Badges */}
                   <div className='flex flex-col sm:flex-row gap-4 items-center justify-center'>
                     <button
                       disabled
@@ -155,7 +154,7 @@ function Solutions() {
                     </button>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </motion.div>
           </div>
         </div>

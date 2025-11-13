@@ -1,5 +1,7 @@
 'use client'
+import { useRef, useState, useEffect } from 'react'
 import Image from 'next/image'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const problems = [
   {
@@ -35,9 +37,42 @@ const problems = [
 ]
 
 function WebResult() {
+  const carouselRef = useRef<HTMLDivElement>(null)
+  const [canScrollLeft, setCanScrollLeft] = useState(false)
+  const [canScrollRight, setCanScrollRight] = useState(true)
+
+  const checkScrollability = () => {
+    if (carouselRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current
+      setCanScrollLeft(scrollLeft > 0)
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 1)
+    }
+  }
+
+  useEffect(() => {
+    checkScrollability()
+    const carousel = carouselRef.current
+    if (carousel) {
+      carousel.addEventListener('scroll', checkScrollability)
+      return () => carousel.removeEventListener('scroll', checkScrollability)
+    }
+  }, [])
+
+  const scrollLeft = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({ left: -320, behavior: 'smooth' })
+    }
+  }
+
+  const scrollRight = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({ left: 320, behavior: 'smooth' })
+    }
+  }
+
   return (
     <section id='aboutus'>
-      <div className='2xl:py-20 py-11'>
+      <div className='pt-16 md:pt-24 pb-12 md:pb-16'>
         <div className='container'>
           <div className='flex flex-col lg:gap-16 gap-5'>
             <div className='flex flex-col items-center justify-center text-center gap-3'>
@@ -53,31 +88,56 @@ function WebResult() {
               </p>
             </div>
             
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-              {problems.map((problem, index) => (
-                <div
-                  key={index}
-                  className='group relative overflow-hidden rounded-2xl cursor-pointer'
-                >
-                  <Image
-                    src={problem.src}
-                    alt={problem.title}
-                    width={400}
-                    height={300}
-                    className='w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110'
-                    unoptimized={true}
-                  />
-              <div className='absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300' />
-              <div className='absolute bottom-0 left-0 right-0 p-6 transform translate-y-0 md:translate-y-full md:group-hover:translate-y-0 transition-transform duration-300'>
-                    <h3 className='text-xl font-semibold text-white mb-2'>
-                      {problem.title}
-                    </h3>
-                    <p className='text-white/90 text-sm'>
-                      {problem.description}
-                    </p>
-                  </div>
+            <div className='relative w-full'>
+              <div
+                ref={carouselRef}
+                className='flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth py-4 [scrollbar-width:none] md:py-6'
+                onScroll={checkScrollability}
+              >
+                <div className='flex flex-row justify-start gap-4 pl-4 mx-auto max-w-7xl'>
+                  {problems.map((problem, index) => (
+                    <div
+                      key={index}
+                      className='relative flex h-80 w-64 flex-shrink-0 flex-col items-start justify-start overflow-hidden rounded-3xl bg-gray-100 md:h-[32rem] md:w-72 dark:bg-neutral-900 hover:scale-105 transition-transform duration-200 ease-out'
+                    >
+                      <div className='pointer-events-none absolute inset-x-0 top-0 z-30 h-full bg-gradient-to-b from-black/70 via-black/30 to-black/10' />
+                      <div className='relative z-40 p-6 bg-gradient-to-b from-black/20 to-transparent rounded-b-3xl w-full'>
+                        <h3 className='text-left font-sans text-lg font-semibold [text-wrap:balance] text-white drop-shadow-lg md:text-xl'>
+                          {problem.title}
+                        </h3>
+                        <p className='mt-2 text-left font-sans text-xs font-medium text-white/90 drop-shadow-lg md:text-sm'>
+                          {problem.description}
+                        </p>
+                      </div>
+                      <Image
+                        src={problem.src}
+                        alt={problem.title}
+                        fill
+                        className='absolute inset-0 z-10 object-cover'
+                        unoptimized={true}
+                      />
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+              
+              {/* Left Arrow */}
+              <button
+                className='absolute left-4 top-1/2 -translate-y-1/2 z-40 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed'
+                onClick={scrollLeft}
+                disabled={!canScrollLeft}
+              >
+                <ChevronLeft className='h-6 w-6 text-gray-600' />
+              </button>
+              
+              {/* Right Arrow */}
+              <button
+                className='absolute right-4 top-1/2 -translate-y-1/2 z-40 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed'
+                onClick={scrollRight}
+                disabled={!canScrollRight}
+              >
+                <ChevronRight className='h-6 w-6 text-gray-600' />
+              </button>
             </div>
           </div>
         </div>

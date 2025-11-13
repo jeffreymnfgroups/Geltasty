@@ -8,7 +8,7 @@ function Faq() {
 
   return (
     <section>
-      <div className='2xl:py-20 py-11'>
+      <div className='pt-16 md:pt-24 pb-12 md:pb-16'>
         <div className='container'>
           <div className='flex flex-col gap-10 md:gap-20'>
             <div className='max-w-2xl text-center mx-auto'>

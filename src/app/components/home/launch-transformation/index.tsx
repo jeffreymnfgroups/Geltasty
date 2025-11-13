@@ -3,7 +3,7 @@ import { CTAButton } from '@/app/components/shared/cta-button'
 
 function LaunchTransformation() {
   return (
-    <section className="w-full pt-20 pb-20 bg-white dark:bg-dark_black">
+    <section className="w-full pt-16 md:pt-24 pb-12 md:pb-16 bg-white dark:bg-dark_black">
       <div className="container">
         <div className="flex flex-col gap-8">
           {/* Hero Content */}

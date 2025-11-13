@@ -40,7 +40,7 @@ function ProblemImpactSolution() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section className='2xl:py-20 py-11 bg-white dark:bg-dark_black'>
+    <section className='pt-16 md:pt-24 pb-12 md:pb-16 bg-white dark:bg-dark_black'>
       <div className='container'>
         <div className='flex flex-col gap-12'>
           <motion.div

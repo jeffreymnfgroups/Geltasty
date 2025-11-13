@@ -28,9 +28,9 @@ function HeroSection() {
               {...bottomAnimation}
               className='relative flex flex-col text-center items-center gap-4'>
               <h1 className='text-4xl md:text-5xl lg:text-6xl font-semibold w-full leading-tight brockmann-font'>
-                A Platform That Thinks{' '}
+                A Platform That {' '}
                 <span className="instrument-font italic font-normal">
-                  With You
+                 Thinks With You
                 </span>
               </h1>
               <p className='text-xl md:text-2xl text-dark_black/80 dark:text-white/80 font-medium'>
@@ -88,7 +88,7 @@ function HeroSection() {
                       <StarRating count={4} color='#F59E0B' />
                     </div>
                     <p className='text-sm font-normal text-dark_black/60 dark:text-white/60'>
-                      Trusted by 10,000+ students
+                      Trusted by 10,000+ aspirants
                     </p>
                   </div>
                 </div>
@@ -107,9 +107,6 @@ function HeroSection() {
                 className='rounded-lg '
                 priority
               />
-              <p className='mt-1 text-sm text-dark_black/60 dark:text-white/60 text-center'>
-                Dashboard visual
-              </p>
             </motion.div>
 
           </div>

@@ -89,7 +89,7 @@ function GestaltyDifference() {
   ]
 
   return (
-    <section className='2xl:py-20 py-11 bg-white dark:bg-gray-900'>
+    <section className='pt-16 md:pt-24 pb-12 md:pb-16 bg-white dark:bg-gray-900'>
       <div className='container'>
         <div className='flex flex-col gap-12'>
           {/* Header */}

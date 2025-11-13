@@ -70,7 +70,7 @@ const differentiators: Differentiator[] = [
 
 export function GestaltyUnique() {
   return (
-    <section className="w-full py-16 md:py-24 bg-white dark:bg-dark_black">
+    <section className="w-full pt-16 md:pt-24 pb-12 md:pb-16 bg-white dark:bg-dark_black">
       <div className="container px-6 lg:px-8 mx-auto">
         {/* Header */}
         <div className="text-center mb-16 md:mb-20">
@@ -97,7 +97,7 @@ export function GestaltyUnique() {
         </div>
 
         {/* CTA Button */}
-        <div className="w-full py-8 flex justify-center">
+        <div className="w-full pt-8 flex justify-center">
           <CTAButton
             href="/contact"
             className="w-full sm:w-auto md:max-w-64"

@@ -364,7 +364,7 @@ const HowItWorks = () => {
       </div>
 
       {/* CTA Button */}
-      <div className="w-full py-16 bg-white dark:bg-dark_black opacity-0 animate-fade-in-up [animation-delay:0.3s]">
+      <div className="w-full pt-16 md:pt-24 pb-12 md:pb-16 bg-white dark:bg-dark_black opacity-0 animate-fade-in-up [animation-delay:0.3s]">
         <div className="container px-6 lg:px-8 flex justify-center">
           <CTAButton
             href='/contact'
