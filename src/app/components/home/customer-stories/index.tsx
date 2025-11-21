@@ -71,7 +71,8 @@ function CustomerStories() {
             transition={{ duration: 1, delay: 0.2 }}
           >
             <h2 className='brockmann-font text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight text-dark_black dark:text-white px-2'>
-              A System that Built on Science, Designed for Success{' '}
+              A System that Built on Science, Designed for Success
+              <br />
               <span className="instrument-font italic font-normal">
                 Core Value Propositions
               </span>
